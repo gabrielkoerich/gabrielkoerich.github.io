@@ -206,6 +206,7 @@ header {
   margin: 40px auto 0;
   width: 300px; }
   header .picture {
+    height: 210px;
     text-align: center; }
     header .picture img {
       border-radius: 100%;
