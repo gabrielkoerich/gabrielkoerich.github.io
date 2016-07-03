@@ -27,5 +27,6 @@ var image = document.createElement('img');
 image.src = pictures[Math.floor(Math.random() * pictures.length)];
 image.width = '210';
 image.alt = '';
+image.className = 'animated fadeIn';
 
-document.getElementById('picture').appendChild(image);
+document.getElementsByClassName('picture')[0].appendChild(image);
