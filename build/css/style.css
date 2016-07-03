@@ -193,7 +193,8 @@ body {
   font-weight: 300;
   font-size: 17px;
   background: #fff;
-  color: #1d2939; }
+  color: #1d2939;
+  line-height: 1.4em; }
 
 a {
   color: #3e70b5;
