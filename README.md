@@ -1,5 +1,4 @@
 # Gabriel Koerich
-[![Build Status](https://travis-ci.org/gabrielkoerich/gabrielkoerich.github.io.png?branch=master)](https://travis-ci.org/gabrielkoerich/gabrielkoerich.github.io)
 
 Personal website. Built with [Fastshell](http://github.com/HosseinKarami/fastshell)
 
