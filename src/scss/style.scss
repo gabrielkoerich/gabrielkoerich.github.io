@@ -1,0 +1,73 @@
+@import '_variables.scss';
+@import '_normalize.scss';
+
+body {
+  font-family: Lato, 'Helvetica Neue';
+  font-weight: 300;
+  font-size: 17px;
+  background: $base;
+  color: $dark;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+header {
+  margin: 40px auto 0;
+  width: 300px;
+
+  .picture {
+    text-align: center;
+
+    img {
+      border-radius: 100%;
+      opacity: 0.9,
+    }
+  }
+}
+
+main {
+  margin: 10px auto;
+  max-width: 670px;
+  padding: 0 20px;
+}
+
+footer {
+  &.footer {
+    margin: 40px auto;
+    width: 200px;
+    text-align: center;
+
+    a {
+      color: #333;
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .fa {
+      font-size: 20px;
+      // font-weight: 300;
+
+      &.fa-twitter {
+        color: $twitter;
+      }
+
+      &.fa-medium {
+        color: $medium;
+      }
+
+      &.fa-instagram {
+        color: $instagram;
+      }
+    }
+  }
+}
