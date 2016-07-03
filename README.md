@@ -1,6 +1,6 @@
 # Gabriel Koerich
 
-Personal website. Built with [Fastshell](http://github.com/HosseinKarami/fastshell)
+Personal website. Built with [Fastshell](http://github.com/HosseinKarami/fastshell).
 
 ## License
 
