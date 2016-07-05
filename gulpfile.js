@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     header  = require('gulp-header'),
     rename = require('gulp-rename'),
     cssnano = require('gulp-cssnano'),
-    package = require('./package.json');
+    package = require('./package.json'),
+    jade = require('gulp-jade');
 
 var banner = [
   '/*!\n' +
@@ -46,6 +47,16 @@ gulp.task('js',function(){
     .pipe(browserSync.reload({ stream: true, once: true }));
 });
 
+gulp.task('jade', function() {
+  var LOCALS = {};
+
+  gulp.src('./src/views/*.jade')
+    .pipe(jade({
+      locals: LOCALS
+    }))
+    .pipe(gulp.dest('./'))
+});
+
 gulp.task('browser-sync', function() {
   browserSync.init(null, {
     server: {
@@ -58,10 +69,10 @@ gulp.task('bs-reload', function () {
   browserSync.reload();
 });
 
-gulp.task('default', ['css', 'js']);
+gulp.task('default', ['css', 'js', 'jade']);
 
-gulp.task('watch', ['css', 'js', 'browser-sync'], function () {
+gulp.task('watch', ['css', 'js', 'jade', 'browser-sync'], function () {
   gulp.watch('src/scss/*.scss', ['css', 'bs-reload']);
   gulp.watch('src/js/*.js', ['js', 'bs-reload']);
-  gulp.watch("*.html", ['bs-reload']);
+  gulp.watch("src/views/*.jade", ['jade', 'bs-reload']);
 });
