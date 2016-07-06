@@ -42,12 +42,12 @@ main {
 
 footer {
   &.footer {
-    margin: 40px auto;
-    width: 200px;
+    font-size: 14px;
+    margin: 20px auto;
+    width: 400px;
     text-align: center;
 
     a {
-      color: #333;
       margin-right: 10px;
 
       &:last-child {
@@ -56,6 +56,7 @@ footer {
     }
 
     .fa {
+      color: #333;
       font-size: 20px;
       // font-weight: 300;
 
