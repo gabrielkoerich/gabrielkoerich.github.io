@@ -57,7 +57,8 @@ gulp.task('browser-sync', function() {
   browserSync.init(null, {
     server: {
       baseDir: "."
-    }
+    },
+    files: ['./build/**/*', './index.html']
   });
 });
 
