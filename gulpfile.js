@@ -8,7 +8,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     cssnano = require('gulp-cssnano'),
     package = require('./package.json'),
-    jade = require('gulp-jade');
+    pug = require('gulp-pug');
 
 var banner = [
   '/*!\n' +
@@ -47,13 +47,9 @@ gulp.task('js',function(){
     .pipe(browserSync.reload({ stream: true, once: true }));
 });
 
-gulp.task('jade', function() {
-  var LOCALS = {};
-
-  gulp.src('./src/views/*.jade')
-    .pipe(jade({
-      locals: LOCALS
-    }))
+gulp.task('pug', function() {
+  gulp.src('./src/views/*.pug')
+    .pipe(pug())
     .pipe(gulp.dest('./'))
 });
 
@@ -65,14 +61,10 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('bs-reload', function () {
-  browserSync.reload();
-});
+gulp.task('default', ['css', 'js', 'pug']);
 
-gulp.task('default', ['css', 'js', 'jade']);
-
-gulp.task('watch', ['css', 'js', 'jade', 'browser-sync'], function () {
-  gulp.watch('src/scss/*.scss', ['css', 'bs-reload']);
-  gulp.watch('src/js/*.js', ['js', 'bs-reload']);
-  gulp.watch("src/views/*.jade", ['jade', 'bs-reload']);
+gulp.task('watch', ['css', 'js', 'pug', 'browser-sync'], function () {
+  gulp.watch('src/scss/*.scss', ['css']);
+  gulp.watch('src/js/*.js', ['js']);
+  gulp.watch("src/views/*.pug", ['pug']);
 });
