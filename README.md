@@ -1,6 +1,6 @@
 # Gabriel Koerich
 
-Personal website. Built with HTML5, Gulp, Sass and Jade. Based on [Fastshell](http://github.com/HosseinKarami/fastshell).
+Personal website. Built with HTML5, Gulp, Sass and Jade.
 
 ## License
 
