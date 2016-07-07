@@ -1,6 +1,6 @@
 # Gabriel Koerich
 
-Personal website. Built with HTML5, Gulp, Sass and Jade.
+Personal website. Built with HTML5, Gulp, Sass and Pug (Jade).
 
 ## License
 
