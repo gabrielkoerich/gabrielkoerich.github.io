@@ -11,7 +11,8 @@ html
     link(href='/build/styles/talks.min.css', rel='stylesheet')
   body
     .reveal
-      block slides
+      .slides
+        block slides
     script(src='https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/js/reveal.min.js')
     script.
       Reveal.initialize({
