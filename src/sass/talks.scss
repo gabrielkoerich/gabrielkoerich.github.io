@@ -28,13 +28,14 @@ body {
   }
 
   .steps {
+    margin: auto;
     font-size: 0.5em;
     list-style: none;
     list-style-type: none;
 
     .step {
       float: left;
-      width: 160px;
+      width: 180px;
       text-align: center;
 
       .icon {
@@ -71,6 +72,7 @@ body {
         list-style-type: none;
         display: block;
         margin: 15px 0 0 20px;
+        padding: 5px;
         font-size: 0.9em;
 
         li {
