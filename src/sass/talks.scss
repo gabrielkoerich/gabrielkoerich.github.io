@@ -2,36 +2,79 @@
 
 body {
   font-family: Lato, 'Helvetica Neue';
-  background: #f7f7f7;
+  // background: #f7f7f7;
 }
 
 .reveal {
+  h1, h2 {
+    font-family: Lato, 'Helvetica Neue';
+    margin-bottom: 1.5em;
+
+    small {
+      margin-top: 0.8em;
+      font-weight: 300;
+    }
+  }
+
   h1 {
-    font-size: 2em;
+    margin-top: 1.5em;
+    font-size: 1.6em;
     text-align: center;
+
     small {
       font-weight: 300;
-      margin-top: 30px;
+      margin-top: 1.5em;
     }
   }
 
   .steps {
-    .step {
-      width: 100px;
-      height: 100px;
-      border-radius: 100%;
-      padding: 10px;
+    font-size: 0.5em;
+    list-style: none;
+    list-style-type: none;
 
-      &:after {
-        font-family: FontAwesome;
-        content: '\f105';
-        color: #333;
-        margin-left: 20px;
+    .step {
+      float: left;
+      width: 160px;
+      text-align: center;
+
+      .icon {
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        color: #fff;
+        margin: 10px auto;
+        i {
+          padding: 15px 0;
+        }
+
+        &:after {
+          font-family: FontAwesome;
+          content: '\f105';
+          color: #333;
+          font-size: 30px;
+          position: absolute;
+          margin-top: 35px;
+          margin-left: 65px;
+        }
       }
 
       &:last-child {
-        &:after {
-          content: '';
+        .icon {
+          &:after {
+            content: '';
+          }
+        }
+      }
+
+      ul.list {
+        list-style-type: none;
+        display: block;
+        margin: 15px 0 0 20px;
+        font-size: 0.9em;
+
+        li {
+          padding: 2px 0;
         }
       }
     }
