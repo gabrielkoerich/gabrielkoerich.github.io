@@ -175,7 +175,7 @@ def summarize_with_claude(repo_name, description, readme_content):
                 summary = re.sub(r"^.*?summary[:\s]+", "", summary, count=1, flags=re.IGNORECASE)
             # Reject if LLM refused, asked for access, or gave a vague answer
             reject = re.search(
-                r"(I don't have|I need access|Could you|I cannot|I can't|provide me|access to the repo|clarify which|Do you have|Once I have|I'll need|you want summarized|Can you provide|I see this is|not documented|appears to be|though specific|functionality details)",
+                r"(I don't have|I need access|Could you|I cannot|I can't|provide me|access to the repo|clarify which|Do you have|Once I have|I'll need|you want summarized|Can you provide|I see this is|not documented|appears to be|though specific|functionality details|no available description|no available README|without documented|no description or README|not enough information)",
                 summary, re.IGNORECASE
             )
             if reject:
@@ -251,8 +251,14 @@ def main():
             print(f"  [{i+1}/{len(repos)}] {name} (cached)", file=sys.stderr)
         else:
             print(f"  [{i+1}/{len(repos)}] {name}", file=sys.stderr)
+            homepage = repo.get("homepage") or ""
             readme = fetch_readme(token, owner, name)
-            if not readme:
+            readme_is_thin = not readme or len(readme.strip()) < 20
+
+            if readme_is_thin and homepage:
+                summary = f"Website code for {homepage}."
+                print(f"    -> website fallback ({homepage})", file=sys.stderr)
+            elif not readme:
                 if description:
                     summary = ""
                     print(f"    -> no README, using description", file=sys.stderr)
@@ -265,10 +271,9 @@ def main():
         languages, lang_bytes = fetch_languages(token, owner, name)
         pages_url = fetch_pages_url(token, owner, name)
 
-        # Fallback for repos with a site but no useful summary
-        homepage = repo.get("homepage") or ""
-        if not summary and homepage:
-            summary = f"Website code for {homepage}."
+        # Fallback for repos with no useful summary
+        if not summary and (repo.get("homepage") or ""):
+            summary = f"Website code for {repo['homepage']}."
         elif not summary and pages_url:
             summary = f"Website code for {pages_url}."
         # Weight adjustments and exclusions for aggregate chart
