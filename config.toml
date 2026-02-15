@@ -1,0 +1,16 @@
+base_url = "https://projects.gabrielkoerich.com"
+
+compile_sass = true
+build_search_index = false
+
+title = "Projects"
+description = "Gabriel Koerich's projects and repositories"
+
+default_language = "en"
+minify_html = true
+
+[extra]
+author = "Gabriel Koerich"
+linkedin = "https://linkedin.com/in/gabrielkoerich"
+github = "https://github.com/gabrielkoerich"
+email = "gabrielmk@gmail.com"
