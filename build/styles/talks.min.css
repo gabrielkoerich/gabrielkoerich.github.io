@@ -1,8 +1,0 @@
-/*!
- * Gabriel Koerich
- * https://gabrielkoerich.github.io
- * @author Gabriel Koerich
- * @version 1.0.0
- * Copyright 2018. MIT licensed.
- */
-.reveal h1,.reveal h2,body{font-family:Lato,Helvetica Neue}.reveal h1,.reveal h2{margin-bottom:1.5em}.reveal h1 small,.reveal h2 small{margin-top:.5em;font-weight:300}.reveal h1{margin-top:1.5em;font-size:1.6em;text-align:center}.reveal h1 small{font-weight:300;margin-top:1.5em}.reveal .steps{margin:auto;font-size:.5em;list-style:none;list-style-type:none}.reveal .steps .step{float:left;width:180px;text-align:center}.reveal .steps .step .icon{display:block;width:50px;height:50px;border-radius:100%;color:#fff;margin:10px auto}.reveal .steps .step .icon i{padding:15px 0}.reveal .steps .step .icon:after{font-family:FontAwesome;content:"\f105";color:#333;font-size:30px;position:absolute;margin-top:35px;margin-left:65px}.reveal .steps .step:last-child .icon:after{content:""}.reveal .steps .step ul.list{list-style-type:none;display:block;margin:15px 0 0 20px;padding:5px;font-size:.9em}.reveal .steps .step ul.list li{padding:2px 0}
