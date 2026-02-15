@@ -150,7 +150,7 @@ def summarize_with_claude(repo_name, description, readme_content):
         env = {k: v for k, v in os.environ.items() if k != "CLAUDECODE"}
         result = subprocess.run(
             ["claude", "-p", "--model", "haiku", prompt],
-            capture_output=True, text=True, timeout=30, env=env,
+            capture_output=True, text=True, timeout=30, env=env, cwd="/tmp",
         )
         if result.returncode == 0:
             summary = result.stdout.strip()
@@ -202,6 +202,11 @@ BLACKLIST = {
     "medical",
     "momentodohler",
     "formabella",
+    "three",
+    "koerich-consultoria",
+    "fundamentando",
+    "testing",
+    "projects",
 }
 
 
@@ -257,13 +262,14 @@ def main():
             "languages": languages,
             "stargazers_count": repo.get("stargazers_count", 0),
             "topics": repo.get("topics", []),
+            "created_at": repo["created_at"],
             "updated_at": repo["updated_at"],
             "archived": repo.get("archived", False),
             "fork": repo.get("fork", False),
         })
 
-    # Sort by year (descending), then stars within each year (descending)
-    results.sort(key=lambda r: (r["updated_at"][:4], r["stargazers_count"], r["updated_at"]), reverse=True)
+    # Sort by update year (descending), then stars within each year (descending)
+    results.sort(key=lambda r: (int(r["updated_at"][:4]), r["stargazers_count"], r["updated_at"]), reverse=True)
 
     # Aggregate language breakdown
     total_bytes = sum(all_lang_bytes.values()) or 1
