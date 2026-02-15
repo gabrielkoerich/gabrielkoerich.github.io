@@ -100,6 +100,15 @@ def fetch_all_repos(token):
     return repos
 
 
+def fetch_pages_url(token, owner, repo_name):
+    """Fetch GitHub Pages URL if enabled."""
+    url = f"https://api.github.com/repos/{owner}/{repo_name}/pages"
+    data, _ = api_get(url, token)
+    if data and data.get("html_url"):
+        return data["html_url"]
+    return None
+
+
 def fetch_languages(token, owner, repo_name):
     """Fetch repo languages sorted by bytes descending. Returns (display list, raw dict)."""
     url = f"https://api.github.com/repos/{owner}/{repo_name}/languages"
@@ -250,6 +259,7 @@ def main():
                 summary = summarize_with_claude(name, description, readme) or ""
 
         languages, lang_bytes = fetch_languages(token, owner, name)
+        pages_url = fetch_pages_url(token, owner, name)
         for lang, bytes_count in lang_bytes.items():
             all_lang_bytes[lang] = all_lang_bytes.get(lang, 0) + bytes_count
 
@@ -260,6 +270,7 @@ def main():
             "html_url": repo["html_url"],
             "private": repo["private"],
             "languages": languages,
+            "pages_url": pages_url or "",
             "stargazers_count": repo.get("stargazers_count", 0),
             "topics": repo.get("topics", []),
             "created_at": repo["created_at"],
@@ -269,7 +280,8 @@ def main():
         })
 
     # Sort by update year (descending), then stars within each year (descending)
-    results.sort(key=lambda r: (int(r["updated_at"][:4]), r["stargazers_count"], r["updated_at"]), reverse=True)
+    results.sort(key=lambda r: r["stargazers_count"], reverse=True)
+    results.sort(key=lambda r: int(r["updated_at"][:4]), reverse=True)
 
     # Aggregate language breakdown
     total_bytes = sum(all_lang_bytes.values()) or 1

@@ -194,11 +194,17 @@ header h1 a:hover {
     white-space: nowrap;
 }
 
+.repo-icons {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
 .repo-link {
     color: var(--text-secondary);
     display: inline-flex;
     align-items: center;
-    margin-left: auto;
 }
 
 .repo-link:hover {
@@ -209,7 +215,6 @@ header h1 a:hover {
 .lock-icon {
     color: var(--text-secondary);
     flex-shrink: 0;
-    margin-left: auto;
 }
 
 .repo-description {
