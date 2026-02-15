@@ -50,7 +50,7 @@
     {
       "name": "orchestrator",
       "description": "A lightweight bash autonomous coding agents orchestrator.",
-      "summary": "A lightweight bash orchestrator that manages autonomous coding agents by routing tasks from a YAML database, spawning specialized agent profiles via CLI tools (claude, codex, opencode), and supporting dynamic task delegation with full tool access. Tasks persist in tasks.yml as the source of truth, with support for scheduling via cron jobs, skill management, and contextual execution tracking. The system uses structured prompts for routing, planning, execution, and optional review phases to coordinate multi-step autonomous work.",
+      "summary": "A lightweight bash-based orchestrator that routes coding tasks to specialized AI agents (Claude, Codex, OpenCode) by reading from a YAML task database, dynamically generating agent profiles with selected skills, and supporting task delegation and status tracking. Tasks live in tasks.yml as the source of truth, with agents running in full agentic mode via CLI tools and capable of spawning subtasks. The system includes scheduling support via jobs.yml, context persistence, and optional GitHub integration for syncing task status.",
       "html_url": "https://github.com/gabrielkoerich/orchestrator",
       "private": false,
       "languages": [
@@ -81,14 +81,14 @@
         "orchestrator"
       ],
       "created_at": "2026-02-06T01:00:40Z",
-      "updated_at": "2026-02-13T23:16:23Z",
+      "updated_at": "2026-02-15T04:15:36Z",
       "archived": false,
       "fork": false
     },
     {
       "name": "skills",
       "description": "A collection of independent, self-contained skills for AI agents. ",
-      "summary": "A collection of independent, self-contained skills for AI agents that each include documentation and configuration via environment variables. Each skill can be installed across different agent platforms like Claude Code, Codex, and OpenClaw with a standardized setup process. Skills are security-reviewed, dependency-managed through setup scripts, and follow the Agent Skills open standard.",
+      "summary": "A collection of independent, self-contained skills for AI agents that live in separate directories with documentation and configuration through environment variables. Each skill follows the Agent Skills open standard and can be installed across different agent platforms like Claude Code, Codex, and OpenClaw. The project includes an interactive setup script that handles dependency checking, API key configuration, and smoke testing.",
       "html_url": "https://github.com/gabrielkoerich/skills",
       "private": false,
       "languages": [
@@ -194,7 +194,7 @@
     {
       "name": "meshbot",
       "description": "Friendly bot that can autonomously handle tasks or delegate to its smarter friends.",
-      "summary": "Multi-agent orchestration framework that coordinates autonomous agents across workflows, with support for task delegation, scheduling, queuing, and channel integrations via Telegram and Discord. Routes work between specialized agents, handles retries and dead-letter queues, and enables dynamic agent creation based on task requirements. Built on pi libraries with isolated execution modes and extensible backend support for different agent implementations.",
+      "summary": "Multi-agent orchestration system that autonomously handles tasks or delegates them to specialized agents through a queue-based workflow engine. Supports scheduled execution, channel integrations (Telegram/Discord), dynamic agent creation, and multiple backend providers (pi-ai, pi-coding-sdk, pi-subprocess). Built on TypeScript/Bun with pluggable persistence and extensible agent routing.",
       "html_url": "https://github.com/gabrielkoerich/meshbot",
       "private": true,
       "languages": [
@@ -230,7 +230,7 @@
     {
       "name": "smart-money-concepts",
       "description": "A TypeScript implementation of Smart Money Concepts (SMC) / ICT methodology for market structure analysis. Detects order blocks, fair value gaps, breaks of structure, changes of character, liquidity grabs, and more.",
-      "summary": "A TypeScript library for detecting Smart Money Concepts (SMC) and ICT market structure patterns including order blocks, fair value gaps, and trend changes from OHLCV candle data. It provides real-time alerts and market state analysis with zero runtime dependencies, supporting both incremental updates and bulk backtesting. The library helps traders identify key technical structures like breaks of structure, changes of character, and liquidity levels for quantitative trading strategies.",
+      "summary": "A TypeScript library that implements Smart Money Concepts and ICT market structure analysis to detect order blocks, fair value gaps, breaks of structure, and other trading signals from OHLCV candle data with zero runtime dependencies. It provides real-time and bulk processing capabilities with methods to retrieve trend bias, price zones, and market maker analysis for both swing and internal market structures. The library is designed for algorithmic trading, backtesting, and live market monitoring without external dependencies.",
       "html_url": "https://github.com/gabrielkoerich/smart-money-concepts",
       "private": false,
       "languages": [
@@ -250,7 +250,7 @@
     {
       "name": "content-course",
       "description": "Content Course landing page with Stripe & Solana payments",
-      "summary": "A landing page for selling digital courses that accepts both Stripe credit card payments and Solana cryptocurrency, built with Nuxt.js 3 and optimized for high conversion rates. It includes optional Supabase integration for managing course access and supports deployment to Vercel with configurable pricing strategies for each payment method.",
+      "summary": "A landing page for selling digital courses built with Nuxt.js 3 that accepts payments via both Stripe and Solana blockchain. Features responsive design optimized for conversions with dual payment options priced at $97 or 1 SOL. Includes optional Supabase integration for managing course access after purchase.",
       "html_url": "https://github.com/gabrielkoerich/content-course",
       "private": true,
       "languages": [
@@ -282,7 +282,7 @@
     {
       "name": "portfolio-guardian-saas",
       "description": "Portfolio Guardian SaaS - Monitor your Solana portfolio 24/7 with AI-powered insights",
-      "summary": "A full-stack SaaS application built with Nuxt.js and Supabase that monitors Solana portfolios in real-time with AI-powered insights, P&L tracking, and automated alerts across multiple subscription tiers. It integrates with Solana RPC, Drift Protocol for perpetual positions, and supports Telegram notifications, OAuth authentication, and voice features via ElevenLabs and OpenAI Whisper. The platform is designed for deployment on Vercel and includes wallet management, portfolio analytics, and tiered pricing from free to enterprise plans.",
+      "summary": "A full-stack SaaS application built with Nuxt.js and Supabase that enables users to monitor their Solana portfolios in real-time with AI-powered insights, P&L tracking, and automated alerts across multiple subscription tiers. The platform integrates with Solana RPC for wallet balance updates, Drift for perpetual position tracking, and Telegram for notifications, with deployment on Vercel and authentication via email, GitHub, or Google OAuth.",
       "html_url": "https://github.com/gabrielkoerich/portfolio-guardian-saas",
       "private": true,
       "languages": [
@@ -314,7 +314,7 @@
     {
       "name": "quant",
       "description": "",
-      "summary": "A Python-based quantitative analysis and trading toolkit designed for financial modeling and algorithmic trading strategies. The project provides tools for backtesting, data analysis, and quantitative research workflows.",
+      "summary": "",
       "html_url": "https://github.com/gabrielkoerich/quant",
       "private": true,
       "languages": [],
@@ -344,7 +344,7 @@
     {
       "name": "bot",
       "description": "",
-      "summary": "A TypeScript trading bot for cryptocurrency markets that supports multiple technical analysis strategies including SMA Crossover, RSI, MACD, Bollinger Bands, SuperTrend, and Smart Money Concepts analysis. The framework provides real-time market data fetching via CCXT, candle streaming, signal generation, and trade execution across different exchanges and protocols. It uses a YAML configuration system and includes backtesting capabilities with a Justfile for command management.",
+      "summary": "A TypeScript trading bot for cryptocurrency markets that uses CCXT to fetch real-time market data and execute trades across multiple exchanges and protocols. It includes a framework for developing and testing technical analysis strategies like SMA Crossover, RSI, MACD, Bollinger Bands, and SuperTrend, along with Smart Money Concepts analysis for institutional order flow. The bot is configured via YAML files and managed with a Justfile for easy command execution.",
       "html_url": "https://github.com/gabrielkoerich/bot",
       "private": true,
       "languages": [
@@ -384,7 +384,7 @@
     {
       "name": "passive-trading",
       "description": "",
-      "summary": "A cryptocurrency trading bot written in Python and Rust that operates on perpetual futures derivatives markets across multiple exchanges (Bybit, OKX, Binance, Hyperliquid, etc.), automatically placing and cancelling limit orders using a contrarian market-making strategy inspired by Martingale betting. It doubles down on losing positions through grid-based entries, employs trailing orders and forager features for dynamic market selection, and includes backtesting and optimization tools to refine trading configurations.",
+      "summary": "A cryptocurrency trading bot written in Python and Rust that automatically creates and cancels limit orders on perpetual futures markets across multiple exchanges like Binance, Bybit, and Hyperliquid. It uses a contrarian market-making strategy inspired by Martingale betting, doubling down on losing positions across a grid while maintaining take-profit targets. The bot includes backtesting and optimization tools with CPU-heavy functions written in Rust, plus features like trailing orders, volatility-based market selection, and an unstucking mechanism for underperforming positions.",
       "html_url": "https://github.com/gabrielkoerich/passive-trading",
       "private": true,
       "languages": [
@@ -420,7 +420,7 @@
     {
       "name": "trader-smith",
       "description": "",
-      "summary": "An autonomous trading agent for Hyperliquid perpetual futures featuring modular architecture, advanced risk management, and real-time monitoring. Baby Smith v2.0 has been refactored into a modern codebase with full type safety and comprehensive error handling. The system is designed for sophisticated market-making strategies while maintaining multiple layers of risk controls.",
+      "summary": "An autonomous trading agent for Hyperliquid perpetual futures featuring modular architecture, advanced risk management, and real-time monitoring. Baby Smith v2.0 provides market-making strategies with sophisticated position controls and comprehensive error handling for traders seeking algorithmic trading capabilities. The system is experimental software designed for autonomous execution of trading operations, requiring careful risk assessment and a funded exchange account.",
       "html_url": "https://github.com/gabrielkoerich/trader-smith",
       "private": true,
       "languages": [
@@ -444,7 +444,7 @@
     {
       "name": "solana-vault-example",
       "description": "A minimal Solana-based tokenized vault implementation that accepts user deposits, mints vault shares (ERC-4626 style), and enables authorized investment into third-party protocols via Cross-Program Invocation (CPI)",
-      "summary": "A minimal Solana-based tokenized vault that accepts user deposits, mints ERC-4626 style vault shares, and enables authorized protocol investments via Cross-Program Invocation. The system uses SPL Token for vault assets and Token-2022 for share tokens, with support for multiple protocol adapters to integrate with external DeFi protocols. Core operations include initializing vaults, depositing assets to mint shares based on exchange rate math, and routing vault capital to external protocols through CPI.",
+      "summary": "A minimal Solana smart contract system implementing a tokenized vault that accepts SPL token deposits, mints ERC-4626 style vault shares, and enables authorized protocol integrations through Cross-Program Invocation (CPI). The implementation demonstrates dual token support using SPL Token and SPL Token-2022 programs, with a main vault program managing deposits and share minting alongside a protocol adapter program for external protocol interaction. Users deposit assets to receive proportional vault shares based on exchange rate calculations, while admins can invest vault assets into third-party protocols.",
       "html_url": "https://github.com/gabrielkoerich/solana-vault-example",
       "private": false,
       "languages": [
@@ -472,7 +472,7 @@
     {
       "name": "private",
       "description": "",
-      "summary": "A collection of utilities for managing privacy and backup operations. Provides command-line tools and scripts to help users securely handle data privacy concerns and maintain reliable backup systems.",
+      "summary": "A CLI utility for managing privacy and backup operations. Provides tools for securing and preserving data through encryption and backup workflows.",
       "html_url": "https://github.com/gabrielkoerich/private",
       "private": true,
       "languages": [
@@ -500,7 +500,7 @@
     {
       "name": "portfolio",
       "description": "Portfolio Manager with multiple strategies with backtests, allocation checks + warning, suggestions for increase/decrease/exit/hedge positions. Deploy strategy using Docker. Built with rust with main focus execution on Solana, using Perps, borrow/lend and yield protocols.",
-      "summary": "A Rust-based portfolio manager that executes multiple trading strategies on Solana through perpetual futures, lending protocols, and yield farming with integrated backtesting, allocation monitoring, and position management suggestions. Provides risk warnings and rebalancing recommendations while supporting containerized deployment via Docker for automated strategy execution.",
+      "summary": "A Rust-based portfolio manager that executes multiple trading strategies on Solana using derivatives, lending, and yield protocols, with integrated backtesting and position management. The system provides allocation monitoring, risk warnings, and actionable suggestions for adjusting positions while supporting containerized deployment via Docker. It combines quantitative analysis with automated execution capabilities across Perps, borrow/lend, and yield platforms.",
       "html_url": "https://github.com/gabrielkoerich/portfolio",
       "private": true,
       "languages": [],
@@ -515,7 +515,7 @@
     {
       "name": "home",
       "description": "Home Containers",
-      "summary": "A collection of containerized services for a home server environment. This project manages and deploys multiple Docker containers to support various home automation and server functionality. It provides a containerized infrastructure solution for running services locally.",
+      "summary": "A project for managing containerized services on a home server. Provides orchestration and deployment configuration for running multiple container-based applications in a home environment.",
       "html_url": "https://github.com/gabrielkoerich/home",
       "private": true,
       "languages": [
@@ -551,7 +551,7 @@
     {
       "name": "lulo-cpi-example",
       "description": "Lulo Example CPI Integration",
-      "summary": "A Solana smart contract program demonstrating user vaults that deposit and withdraw funds through the Lulo protocol via CPI (Cross-Program Invocation). Users can deposit to earn interest by transferring to Lulo, and withdraw either directly if sufficient balance exists or asynchronously through a Lulo withdrawal request. The example illustrates a pattern adaptable to protocol reserves where only admins manage deposits and withdrawals.",
+      "summary": "User Vaults program demonstrating CPI integration with Lulo, allowing users to deposit, withdraw, and earn interest on their assets through cross-program invocations. Users can transfer amounts to Lulo for yield generation, with withdrawals either processed directly from the vault or asynchronously requested from Lulo if insufficient local liquidity exists. The architecture is adaptable for protocol reserves where only admin accounts manage deposits, transfers, and withdrawals.",
       "html_url": "https://github.com/gabrielkoerich/lulo-cpi-example",
       "private": false,
       "languages": [
@@ -578,7 +578,7 @@
     {
       "name": "bliv",
       "description": "",
-      "summary": "A Solana-based DeFi protocol that optimizes yield farming and liquidity provision through smart contracts and a web interface. The project combines Anchor smart contracts deployed on Solana with a Next.js frontend, providing tools to liberate and maximize decentralized finance yields. It includes a local validator setup for development and testing with demo markets and a CLI for program interactions.",
+      "summary": "A Solana-based DeFi protocol that enables users to optimize and liberate yield farming strategies across decentralized finance applications. Built with Rust/Anchor smart contracts and a Next.js frontend, it provides a CLI tool and web interface for managing yield positions on the Solana blockchain.",
       "html_url": "https://github.com/gabrielkoerich/bliv",
       "private": true,
       "languages": [
@@ -618,7 +618,7 @@
     {
       "name": "bean",
       "description": "Personal (or not) finance, accounting, defi/quant investments, projects and ideas.",
-      "summary": "A personal finance and quantitative investing project built on Beancount for plain text accounting, with infrastructure for importing financial transactions, analyzing portfolios, and implementing stock screening strategies across B3, Nasdaq, and Yahoo data sources. Combines ledger management, Jupyter notebooks for analysis, invoice generation, and personal knowledge management in a single repository with CI/CD workflows for automated price data updates.",
+      "summary": "A personal finance and investment analysis platform built with Beancount for accounting, featuring quant investment screeners and portfolio analysis tools. The project integrates multiple data sources (Nasdaq, Yahoo, Fundamentus) to track transactions, calculate financial metrics like Beta and VaR, and implement factor-based investment rankings. It combines plain text accounting workflows with Jupyter notebooks for analysis and includes personal notes and project documentation.",
       "html_url": "https://github.com/gabrielkoerich/bean",
       "private": true,
       "languages": [
@@ -654,7 +654,7 @@
     {
       "name": "mev",
       "description": "",
-      "summary": "A Rust-based starter template for building MEV bots on Solana that handles boilerplate setup for Jito searcher and geyser protobufs. It includes a reference implementation of a backrun arbitrage bot that identifies profitable trades in the mempool, calculates arbitrage routes across DEXs like Raydium and Orca, and executes backrun transactions through Jito bundles. The template pins dependencies to Solana 1.14.13 for consistency and allows developers to add custom bot implementations into the workspace structure.",
+      "summary": "A Rust-based starter template for building Solana MEV bots that abstracts away boilerplate for Jito searcher and geyser client setup. Includes a reference implementation of a backrun arbitrage bot that monitors the mempool to identify and profit from large trades across DEXes like Raydium and Orca by executing profitable arbitrage routes after target transactions.",
       "html_url": "https://github.com/gabrielkoerich/mev",
       "private": true,
       "languages": [
@@ -694,7 +694,7 @@
     {
       "name": "defi-automator",
       "description": "Manage your DeFi like a quant fund",
-      "summary": "CLI tool for automating DeFi portfolio management on Solana's Orca Whirlpools, enabling users to create concentrated liquidity positions using algorithmic strategies with automatic rebalancing and fee collection. Currently supports strategies like One Tick Lower and One Tick Upper, with plans to expand to additional protocols and chains.",
+      "summary": "A tool for automating DeFi portfolio management on Solana's Orca Whirlpools using algorithmic strategies that automatically rebalance concentrated liquidity positions and collect fees. Currently supports positioning strategies like \"One Tick Lower\" and \"One Tick Upper\" to optimize yield generation based on price movements. The project is in active development with plans to expand to additional protocols and blockchain networks.",
       "html_url": "https://github.com/gabrielkoerich/defi-automator",
       "private": true,
       "languages": [
@@ -726,7 +726,7 @@
     {
       "name": "solana-nft-marketplace",
       "description": "NFT marketplace contract on Solana",
-      "summary": "An NFT marketplace contract built on Solana using Anchor 0.18.2 from 2021 that enables users to list, update, and cancel NFT listings while supporting purchases with integrated marketplace fees and royalty payouts. The contract provides core marketplace functionality including price management and automated fee distribution to both the marketplace and NFT creators.",
+      "summary": "Solana NFT marketplace contract built with Anchor 0.18.2 that enables users to list NFTs, update prices, cancel listings, and purchase NFTs while automatically handling marketplace fees and royalty payments. The contract was developed for a hackathon in 2021 and may contain outdated patterns or dependencies that could benefit from modernization.",
       "html_url": "https://github.com/gabrielkoerich/solana-nft-marketplace",
       "private": true,
       "languages": [
@@ -750,7 +750,7 @@
     {
       "name": "classification",
       "description": "",
-      "summary": "A Laravel-based system for classifying company attributes that uses an attribution classifier to automatically categorize and process company data, with comprehensive test coverage via PHPUnit.",
+      "summary": "A Laravel-based system for classifying company attributes using an attribution classifier that processes company data and stores results. The project includes a Company model, a classification service, and comprehensive tests to validate the attribute classification logic.",
       "html_url": "https://github.com/gabrielkoerich/classification",
       "private": true,
       "languages": [
@@ -778,7 +778,7 @@
     {
       "name": "gabrielkoerich",
       "description": "",
-      "summary": "A technical professional with 17+ years of software engineering experience, specializing in Rust and Solana smart contract development. Currently architecting DeFi protocols at Lulo and previously founded Bulldesk, a marketing automation SaaS acquired in 2021. Passionate about solving real-world problems in finance and building scalable systems.",
+      "summary": "A personal portfolio and professional profile for a software engineer specializing in Rust and Solana DeFi development, with 17+ years of experience building scalable systems and smart contracts. Currently architecting protocols at Lulo while bringing expertise from founding and scaling previous ventures like Bulldesk.",
       "html_url": "https://github.com/gabrielkoerich/gabrielkoerich",
       "private": false,
       "languages": [
@@ -814,7 +814,7 @@
     {
       "name": "bulldesk-gridsome",
       "description": "",
-      "summary": "A Gridsome starter project that combines Vue.js, GraphQL, and Bootstrap to generate static websites with built-in CMS integration via Forestry.io, Netlify forms, and Google Analytics. It provides a ready-to-deploy setup for content management through Markdown files stored in GitHub, designed for developers who want a powerful static site generator with minimal hosting costs. The project includes automated sitemap generation, Sass styling, and easy deployment through Netlify's CI/CD pipeline.",
+      "summary": "Gridsome starter bootstrap is a static site generator project that combines Vue.js, GraphQL, and Bootstrap to create fast, responsive websites with built-in CMS integration via Forestry.io. It includes Sass styling, Netlify form support, Google Analytics, and automatic sitemap generation, designed for easy deployment to Netlify with GitHub as the content storage backend. The project is preconfigured for rapid development and requires minimal setup to get started with local development or automatic CI/CD deployment.",
       "html_url": "https://github.com/gabrielkoerich/bulldesk-gridsome",
       "private": true,
       "languages": [
@@ -846,7 +846,7 @@
     {
       "name": "granatum-php",
       "description": "A PHP 7+ library for the Granatum API.",
-      "summary": "A PHP 7+ library that provides integration with the Granatum API for financial services. It enables developers to interact with Granatum's financial management platform programmatically through a native PHP interface.",
+      "summary": "A PHP 7+ library that provides integration with the Granatum API for financial management. It enables developers to interact with Granatum's financeiro (financial) services programmatically from PHP applications. The library simplifies API communication for PHP 7+ projects.",
       "html_url": "https://github.com/gabrielkoerich/granatum-php",
       "private": false,
       "languages": [
@@ -868,7 +868,7 @@
     {
       "name": "guidelines",
       "description": "My PHP, HTML, CSS and Javascript guidelines.",
-      "summary": "Guidelines repository documenting coding standards for PHP, HTML, CSS, and JavaScript projects, including PSR-2 compliance, indentation rules, and documentation conventions. Covers version control practices using GitHub Flow, commit message style, and language-specific best practices for different file types.",
+      "summary": "A comprehensive style guide repository documenting coding standards and best practices for PHP, HTML, CSS, and JavaScript development. The guidelines enforce PSR-2 and PSR-4 standards for PHP, specify indentation rules across languages, and establish Git workflow conventions using GitHub Flow for collaborative development. All code contributions must follow English naming conventions, be reviewed before merging, and adhere to documented formatting standards for each language.",
       "html_url": "https://github.com/gabrielkoerich/guidelines",
       "private": false,
       "languages": [],
@@ -883,7 +883,7 @@
     {
       "name": "dotfiles",
       "description": "Gabriel's config files (zsh, tmux, git, etc) + backups, brew installs, coding agents and macOS setup.",
-      "summary": "Configuration management and macOS setup toolkit for Gabriel's development environment, including shell customization (zsh, tmux, neovim), app backup/restore via Mackup, and automated installation of coding agents and brew dependencies through Just command runner tasks.",
+      "summary": "Configuration management repository containing shell configs (zsh, tmux, git), macOS setup scripts, application settings backups via mackup, and coding agent tooling (claude, codex, opencode). Provides automated installation and synchronization of dotfiles across machines using just commands, with security auditing and pre-commit hooks. Designed for reproducible development environment setup with selective component installation and app settings restoration.",
       "html_url": "https://github.com/gabrielkoerich/dotfiles",
       "private": false,
       "languages": [
@@ -951,14 +951,14 @@
       "stargazers_count": 1,
       "topics": [],
       "created_at": "2016-07-03T03:07:50Z",
-      "updated_at": "2026-02-15T04:00:56Z",
+      "updated_at": "2026-02-15T04:05:56Z",
       "archived": false,
       "fork": false
     },
     {
       "name": "addressing",
       "description": "Brazilian postalcode to address in a service manager.",
-      "summary": "A service that converts Brazilian postal codes (CEP) to full addresses. Provides a simple interface for looking up address information based on postal codes in Brazil.",
+      "summary": "A service manager that converts Brazilian postal codes to addresses. It provides a simple interface for looking up address information based on postal code input. Licensed under MIT.",
       "html_url": "https://github.com/gabrielkoerich/addressing",
       "private": false,
       "languages": [
@@ -978,7 +978,7 @@
     {
       "name": "service-manager",
       "description": "A simple way to run services in sequence.",
-      "summary": "A simple Node.js service manager that runs services in sequence. It provides a straightforward way to orchestrate and manage the execution order of multiple services. Licensed under MIT, it's designed for developers who need a lightweight solution for sequential service orchestration.",
+      "summary": "A simple manager to run services in sequence. Service Manager provides a lightweight way to orchestrate multiple services with automatic sequential execution. It's licensed under the MIT License.",
       "html_url": "https://github.com/gabrielkoerich/service-manager",
       "private": false,
       "languages": [
@@ -998,7 +998,7 @@
     {
       "name": "algorit",
       "description": "WIP",
-      "summary": "A web application combining a Vue.js frontend with Laravel Elixir, Sass, and Pug for styling and templating, paired with a PHP Lumen backend for API services. The project uses modern frontend tooling with Gulp for build automation while maintaining a lightweight PHP microframework approach on the server side.",
+      "summary": "A work-in-progress web application built with Vue.js, Laravel Elixir, and Lumen PHP that combines a modern frontend stack with a lightweight PHP backend framework. The project uses Sass for styling, Pug for templating, and Gulp for build processes to create a full-stack development environment.",
       "html_url": "https://github.com/gabrielkoerich/algorit",
       "private": true,
       "languages": [
@@ -1054,7 +1054,7 @@
     {
       "name": "basedash",
       "description": "",
-      "summary": "A Laravel-based web application framework that provides database management and system administration capabilities. The project includes a full development stack with Node.js asset building, database migrations, and comprehensive testing infrastructure using PHPUnit. It integrates frontend tools like Bower and Grunt for managing and building client-side assets.",
+      "summary": "A PHP-based dashboard application built with Laravel that requires Composer, Node.js, and Bower for dependency management and uses Grunt for asset building. The project includes database migrations, optional seeding, and system synchronization features, with testing support via PHPUnit.",
       "html_url": "https://github.com/gabrielkoerich/basedash",
       "private": true,
       "languages": [
@@ -1090,7 +1090,7 @@
     {
       "name": "bovespa.io",
       "description": "bovespa.io",
-      "summary": "A Laravel-based web application for financial data management with a frontend built using Node.js and Bower. The project includes database migrations, seeds, automated testing via PHPUnit, and a gulp-based build pipeline for asset compilation. Fundamentando provides tools for managing and analyzing stock market data through a full-stack PHP and JavaScript architecture.",
+      "summary": "A Laravel-based web application for managing and tracking Brazilian stock market (Bovespa) data with a PHP backend, frontend built with npm/bower/gulp tooling, and comprehensive test coverage via PHPUnit. The project follows standard Laravel conventions with database migrations, seeders, and a full development and production setup workflow. Includes code coverage reporting and supports both development and production composer installations.",
       "html_url": "https://github.com/gabrielkoerich/bovespa.io",
       "private": true,
       "languages": [
