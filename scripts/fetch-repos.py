@@ -219,6 +219,7 @@ BLACKLIST = {
     "report",
     "partners",
     "iafut-backend",
+    "cross-domain",
 }
 
 
@@ -265,10 +266,11 @@ def main():
         pages_url = fetch_pages_url(token, owner, name)
 
         # Fallback for repos with a site but no useful summary
-        if not summary and pages_url:
-            summary = f"Website for {name}."
-        elif not summary and ("." in name or name.endswith("-io")):
-            summary = f"Website for {name.replace('.', ' ').replace('-', ' ')}."
+        homepage = repo.get("homepage") or ""
+        if not summary and homepage:
+            summary = f"Website code for {homepage}."
+        elif not summary and pages_url:
+            summary = f"Website code for {pages_url}."
         # Weight adjustments and exclusions for aggregate chart
         LANG_HIDE = {"HTML", "CSS"}
         LANG_WEIGHT = {"Jupyter Notebook": 0.1, "Rust": 2}
@@ -302,6 +304,7 @@ def main():
     total_bytes = sum(all_lang_bytes.values()) or 1
     lang_sorted = sorted(all_lang_bytes.items(), key=lambda x: x[1], reverse=True)
     lang_breakdown = []
+    other_pct = 0
     for lang, bytes_count in lang_sorted:
         pct = round(bytes_count / total_bytes * 100, 1)
         if pct >= 0.5:
@@ -310,6 +313,15 @@ def main():
                 "color": LANG_COLORS.get(lang, "#58a6ff"),
                 "percentage": pct,
             })
+        else:
+            other_pct += pct
+
+    if other_pct > 0:
+        lang_breakdown.append({
+            "name": "Other",
+            "color": "#8b949e",
+            "percentage": round(other_pct, 1),
+        })
 
     output = {"languages": lang_breakdown, "repos": results}
     out_path.parent.mkdir(parents=True, exist_ok=True)
