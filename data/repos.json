@@ -1,0 +1,1327 @@
+{
+  "languages": [
+    {
+      "name": "PHP",
+      "color": "#4F5D95",
+      "percentage": 47.9
+    },
+    {
+      "name": "Jupyter Notebook",
+      "color": "#DA5B0B",
+      "percentage": 18.8
+    },
+    {
+      "name": "CSS",
+      "color": "#563d7c",
+      "percentage": 9.8
+    },
+    {
+      "name": "JavaScript",
+      "color": "#f1e05a",
+      "percentage": 9.6
+    },
+    {
+      "name": "TypeScript",
+      "color": "#3178c6",
+      "percentage": 5.1
+    },
+    {
+      "name": "HTML",
+      "color": "#e34c26",
+      "percentage": 2.9
+    },
+    {
+      "name": "Python",
+      "color": "#3572A5",
+      "percentage": 2.6
+    },
+    {
+      "name": "Rust",
+      "color": "#dea584",
+      "percentage": 1.2
+    },
+    {
+      "name": "Vue",
+      "color": "#41b883",
+      "percentage": 0.8
+    },
+    {
+      "name": "Shell",
+      "color": "#89e051",
+      "percentage": 0.8
+    }
+  ],
+  "repos": [
+    {
+      "name": "dotfiles",
+      "description": "Gabriel's config files (zsh, tmux, git, etc) + backups, brew installs, coding agents and macOS setup.",
+      "summary": "Configuration management system for macOS using shell, tmux, neovim, and coding agent tooling with automated setup, backup, and sync capabilities via Just command runner. Includes installation scripts for Homebrew packages, fonts, cask applications, and restoration of app settings through Mackup integration. Designed for reproducible machine configuration with security auditing and version-controlled dotfiles covering shell, terminal, editor, and development tooling.",
+      "html_url": "https://github.com/gabrielkoerich/dotfiles",
+      "private": false,
+      "languages": [
+        {
+          "name": "Shell",
+          "color": "#89e051"
+        },
+        {
+          "name": "Vim Script",
+          "color": "#199f4b"
+        },
+        {
+          "name": "Lua",
+          "color": "#000080"
+        },
+        {
+          "name": "Ruby",
+          "color": "#701516"
+        },
+        {
+          "name": "Just",
+          "color": "#58a6ff"
+        }
+      ],
+      "stargazers_count": 5,
+      "topics": [
+        "brew",
+        "dotfiles",
+        "homebrew",
+        "mackup",
+        "tmux",
+        "zsh"
+      ],
+      "updated_at": "2026-02-13T21:42:18Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "guidelines",
+      "description": "My PHP, HTML, CSS and Javascript guidelines.",
+      "summary": "A repository documenting coding standards and best practices for PHP, HTML, CSS, and JavaScript development. It establishes conventions for naming, indentation, documentation, and code organization across multiple languages while enforcing PSR-2 and PSR-4 standards for PHP. The guidelines emphasize clean, maintainable code with consistent style across the team's projects.",
+      "html_url": "https://github.com/gabrielkoerich/guidelines",
+      "private": false,
+      "languages": [],
+      "stargazers_count": 5,
+      "topics": [],
+      "updated_at": "2022-05-06T12:36:30Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "lulo-cpi-example",
+      "description": "Lulo Example CPI Integration",
+      "summary": "A Solana program demonstrating CPI integration with Lulo that allows users to deposit into vaults, transfer funds to Lulo for interest earning, and withdraw with optional async processing when vault liquidity is insufficient. The example showcases how to build flexible vault systems with cross-program invocations and can be adapted for protocol-level reserves with admin controls.",
+      "html_url": "https://github.com/gabrielkoerich/lulo-cpi-example",
+      "private": false,
+      "languages": [
+        {
+          "name": "Rust",
+          "color": "#dea584"
+        },
+        {
+          "name": "TypeScript",
+          "color": "#3178c6"
+        }
+      ],
+      "stargazers_count": 3,
+      "topics": [
+        "lulo",
+        "solana"
+      ],
+      "updated_at": "2024-11-14T22:30:04Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "orchestrator",
+      "description": "A lightweight bash autonomous coding agents orchestrator.",
+      "summary": "A lightweight bash-based orchestrator that manages autonomous coding agents by routing tasks from a YAML database and spawning specialized agent profiles (Claude, Codex, OpenCode) with dynamic tool access and delegation capabilities. Tasks live in tasks.yml as the source of truth, with agents executing via CLI tools in full agentic mode and supporting hierarchical subtask delegation. The system includes runtime configuration, skill management, execution prompts, and state tracking through YAML files and runtime directories.",
+      "html_url": "https://github.com/gabrielkoerich/orchestrator",
+      "private": false,
+      "languages": [
+        {
+          "name": "Shell",
+          "color": "#89e051"
+        },
+        {
+          "name": "Python",
+          "color": "#3572A5"
+        },
+        {
+          "name": "Just",
+          "color": "#58a6ff"
+        },
+        {
+          "name": "Ruby",
+          "color": "#701516"
+        }
+      ],
+      "stargazers_count": 2,
+      "topics": [
+        "claude",
+        "claude-code",
+        "codex",
+        "opencode",
+        "orchestrator"
+      ],
+      "updated_at": "2026-02-13T23:16:23Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "skills",
+      "description": "A collection of independent, self-contained skills for AI agents. ",
+      "summary": "A collection of independent, self-contained skills for AI agents where each skill lives in its own directory with documentation and configuration via environment variables. Skills follow the Agent Skills open standard and work with any agent that supports SKILL.md files, including Claude Code, Codex, and OpenClaw. The setup script automates dependency checking, API key configuration, and smoke testing for quick installation across different agent platforms.",
+      "html_url": "https://github.com/gabrielkoerich/skills",
+      "private": false,
+      "languages": [
+        {
+          "name": "Python",
+          "color": "#3572A5"
+        },
+        {
+          "name": "Shell",
+          "color": "#89e051"
+        },
+        {
+          "name": "TypeScript",
+          "color": "#3178c6"
+        },
+        {
+          "name": "Just",
+          "color": "#58a6ff"
+        }
+      ],
+      "stargazers_count": 2,
+      "topics": [
+        "claude",
+        "claude-code",
+        "codex",
+        "openclaw",
+        "skills"
+      ],
+      "updated_at": "2026-02-12T17:20:10Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "granatum-php",
+      "description": "A PHP 7+ library for the Granatum API.",
+      "summary": "A PHP 7+ library that provides programmatic access to the Granatum API for financial operations. This package enables PHP developers to integrate Granatum's financial management services into their applications. It offers a simple interface for authenticating with and consuming Granatum's REST API endpoints.",
+      "html_url": "https://github.com/gabrielkoerich/granatum-php",
+      "private": false,
+      "languages": [
+        {
+          "name": "PHP",
+          "color": "#4F5D95"
+        }
+      ],
+      "stargazers_count": 2,
+      "topics": [
+        "php"
+      ],
+      "updated_at": "2025-02-20T17:43:08Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "claudio",
+      "description": "Personal clawdbot with memory, subagents, cron schedules, projects and configurations.",
+      "summary": "",
+      "html_url": "https://github.com/gabrielkoerich/claudio",
+      "private": true,
+      "languages": [
+        {
+          "name": "TypeScript",
+          "color": "#3178c6"
+        },
+        {
+          "name": "Vue",
+          "color": "#41b883"
+        },
+        {
+          "name": "Python",
+          "color": "#3572A5"
+        },
+        {
+          "name": "Shell",
+          "color": "#89e051"
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        },
+        {
+          "name": "PLpgSQL",
+          "color": "#58a6ff"
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        },
+        {
+          "name": "CSS",
+          "color": "#563d7c"
+        }
+      ],
+      "stargazers_count": 1,
+      "topics": [],
+      "updated_at": "2026-02-15T00:51:33Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "bean",
+      "description": "Personal (or not) finance, accounting, defi/quant investments, projects and ideas.",
+      "summary": "A personal finance and quantitative investment platform built on Beancount for accounting, with notebooks for analysis and tools for importing financial data, calculating investment metrics like Beta and VaR, and implementing stock screeners using various ranking strategies. Includes a knowledge base for notes and ideas, automated invoice generation, and CI/CD workflows for price updates and data validation.",
+      "html_url": "https://github.com/gabrielkoerich/bean",
+      "private": true,
+      "languages": [
+        {
+          "name": "Jupyter Notebook",
+          "color": "#DA5B0B"
+        },
+        {
+          "name": "Python",
+          "color": "#3572A5"
+        },
+        {
+          "name": "Shell",
+          "color": "#89e051"
+        },
+        {
+          "name": "Just",
+          "color": "#58a6ff"
+        },
+        {
+          "name": "Dockerfile",
+          "color": "#384d54"
+        }
+      ],
+      "stargazers_count": 1,
+      "topics": [],
+      "updated_at": "2026-02-14T20:09:29Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "gabrielkoerich.github.io",
+      "description": "https://gabrielkoerich.com",
+      "summary": "A personal website for Gabriel Koerich built with HTML5, Gulp, Sass, and Pug templating. The project serves as a portfolio and online presence at gabrielkoerich.com, demonstrating web development skills through a custom-built static site.",
+      "html_url": "https://github.com/gabrielkoerich/gabrielkoerich.github.io",
+      "private": false,
+      "languages": [
+        {
+          "name": "Pug",
+          "color": "#58a6ff"
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        },
+        {
+          "name": "SCSS",
+          "color": "#c6538c"
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        }
+      ],
+      "stargazers_count": 1,
+      "topics": [],
+      "updated_at": "2026-02-13T22:08:26Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "gabrielkoerich",
+      "description": "",
+      "summary": "A personal portfolio and professional profile for Gabriel Koerich, a software engineer and entrepreneur with 17+ years of experience specializing in Rust, Solana smart contracts, and DeFi protocol development. The site showcases his background in software development, previous founding of Bulldesk (a marketing automation SaaS), and current work architecting smart contracts at Lulo.",
+      "html_url": "https://github.com/gabrielkoerich/gabrielkoerich",
+      "private": false,
+      "languages": [
+        {
+          "name": "Python",
+          "color": "#3572A5"
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        },
+        {
+          "name": "SCSS",
+          "color": "#c6538c"
+        },
+        {
+          "name": "Shell",
+          "color": "#89e051"
+        },
+        {
+          "name": "Just",
+          "color": "#58a6ff"
+        }
+      ],
+      "stargazers_count": 1,
+      "topics": [],
+      "updated_at": "2026-02-11T19:36:51Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "bot",
+      "description": "",
+      "summary": "A TypeScript trading bot for cryptocurrency markets that supports multiple technical analysis strategies including SMA crossover, RSI, MACD, Bollinger Bands, SuperTrend, and Smart Money Concepts analysis. It provides real-time market data fetching via CCXT, strategy combination framework, signal generation, and trade execution across various exchanges and protocols, configured through YAML files and managed via a Justfile.",
+      "html_url": "https://github.com/gabrielkoerich/bot",
+      "private": true,
+      "languages": [
+        {
+          "name": "TypeScript",
+          "color": "#3178c6"
+        },
+        {
+          "name": "Rust",
+          "color": "#dea584"
+        },
+        {
+          "name": "Python",
+          "color": "#3572A5"
+        },
+        {
+          "name": "Shell",
+          "color": "#89e051"
+        },
+        {
+          "name": "Just",
+          "color": "#58a6ff"
+        },
+        {
+          "name": "Dockerfile",
+          "color": "#384d54"
+        }
+      ],
+      "stargazers_count": 1,
+      "topics": [],
+      "updated_at": "2026-01-10T16:18:44Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "addressing",
+      "description": "Brazilian postalcode to address in a service manager.",
+      "summary": "A Brazilian postal code to address lookup service that converts ZIP codes into full address information. It provides a simple, MIT-licensed tool for integrating address resolution capabilities into applications requiring Brazilian address data.",
+      "html_url": "https://github.com/gabrielkoerich/addressing",
+      "private": false,
+      "languages": [
+        {
+          "name": "PHP",
+          "color": "#4F5D95"
+        }
+      ],
+      "stargazers_count": 1,
+      "topics": [],
+      "updated_at": "2025-02-20T17:42:53Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "service-manager",
+      "description": "A simple way to run services in sequence.",
+      "summary": "A simple manager that runs services in sequence. It provides an easy way to orchestrate multiple services with automatic execution flow. Licensed under the MIT License.",
+      "html_url": "https://github.com/gabrielkoerich/service-manager",
+      "private": false,
+      "languages": [
+        {
+          "name": "PHP",
+          "color": "#4F5D95"
+        }
+      ],
+      "stargazers_count": 1,
+      "topics": [],
+      "updated_at": "2023-04-17T19:21:57Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "algorit",
+      "description": "WIP",
+      "summary": "A work-in-progress web application combining a Vue.js frontend with HTML5, Sass, and Pug templating, paired with a PHP and Lumen backend. The project uses Laravel Elixir for build automation and is released under the MIT License.",
+      "html_url": "https://github.com/gabrielkoerich/algorit",
+      "private": true,
+      "languages": [
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        },
+        {
+          "name": "CSS",
+          "color": "#563d7c"
+        },
+        {
+          "name": "PHP",
+          "color": "#4F5D95"
+        },
+        {
+          "name": "ApacheConf",
+          "color": "#58a6ff"
+        }
+      ],
+      "stargazers_count": 1,
+      "topics": [],
+      "updated_at": "2017-03-06T19:24:08Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "basedash",
+      "description": "",
+      "summary": "A PHP-based web application framework built with Laravel that provides database management and dashboard functionality, requiring Composer for dependencies and Node.js tooling for frontend asset compilation. The project includes comprehensive testing infrastructure via PHPUnit and integrates with various CI/CD and code quality services. Installation involves standard Laravel setup with Composer, npm, Bower, and Grunt for building production-ready assets.",
+      "html_url": "https://github.com/gabrielkoerich/basedash",
+      "private": true,
+      "languages": [
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        },
+        {
+          "name": "CSS",
+          "color": "#563d7c"
+        },
+        {
+          "name": "PHP",
+          "color": "#4F5D95"
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        },
+        {
+          "name": "ApacheConf",
+          "color": "#58a6ff"
+        }
+      ],
+      "stargazers_count": 1,
+      "topics": [],
+      "updated_at": "2017-01-06T02:03:10Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "cashier-iugu",
+      "description": "Iugu integration for Laravel Cashier",
+      "summary": "",
+      "html_url": "https://github.com/gabrielkoerich/cashier-iugu",
+      "private": true,
+      "languages": [
+        {
+          "name": "PHP",
+          "color": "#4F5D95"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2026-02-15T00:47:03Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "solana-vault-example",
+      "description": "A minimal Solana-based tokenized vault implementation that accepts user deposits, mints vault shares (ERC-4626 style), and enables authorized investment into third-party protocols via Cross-Program Invocation (CPI)",
+      "summary": "A minimal Solana-based tokenized vault implementation that accepts user deposits, mints vault shares following ERC-4626 exchange rate math, and enables authorized investments into external protocols via Cross-Program Invocation. The system uses SPL Token for vault assets and SPL Token-2022 for share tokens, with support for multiple protocol integrations tracked in vault state. Core functionality includes deposit operations, share minting based on exchange rates, and protocol adapter management for third-party protocol interactions.",
+      "html_url": "https://github.com/gabrielkoerich/solana-vault-example",
+      "private": false,
+      "languages": [
+        {
+          "name": "TypeScript",
+          "color": "#3178c6"
+        },
+        {
+          "name": "Rust",
+          "color": "#dea584"
+        },
+        {
+          "name": "Just",
+          "color": "#58a6ff"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2026-02-15T00:43:50Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "homebrew-tap",
+      "description": "Homebrew tap for orchestrator",
+      "summary": "",
+      "html_url": "https://github.com/gabrielkoerich/homebrew-tap",
+      "private": false,
+      "languages": [
+        {
+          "name": "Ruby",
+          "color": "#701516"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2026-02-13T23:22:31Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "meshbot",
+      "description": "Friendly bot that can autonomously handle tasks or delegate to its smarter friends.",
+      "summary": "Multi-agent orchestration framework that autonomously handles tasks or delegates work to specialized agents through workflow routing, scheduling, and channel integration. Provides queue management, retry logic, persistence, and dynamic agent creation with tool/skill selection capabilities. Built on TypeScript/Bun with support for isolated execution modes and integration with coding agents.",
+      "html_url": "https://github.com/gabrielkoerich/meshbot",
+      "private": true,
+      "languages": [
+        {
+          "name": "TypeScript",
+          "color": "#3178c6"
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        },
+        {
+          "name": "CSS",
+          "color": "#563d7c"
+        },
+        {
+          "name": "HCL",
+          "color": "#58a6ff"
+        },
+        {
+          "name": "Jinja",
+          "color": "#58a6ff"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2026-02-13T22:31:04Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "smart-money-concepts",
+      "description": "A TypeScript implementation of Smart Money Concepts (SMC) / ICT methodology for market structure analysis. Detects order blocks, fair value gaps, breaks of structure, changes of character, liquidity grabs, and more.",
+      "summary": "A TypeScript library that analyzes market structure using Smart Money Concepts (SMC) and ICT methodology, detecting patterns like order blocks, fair value gaps, and liquidity grabs from OHLCV candlestick data. It provides real-time market analysis with zero dependencies, supporting both streaming updates and bulk backtesting with methods to determine trend bias, price zones, and order block locations.",
+      "html_url": "https://github.com/gabrielkoerich/smart-money-concepts",
+      "private": false,
+      "languages": [
+        {
+          "name": "TypeScript",
+          "color": "#3178c6"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2026-02-13T22:03:04Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "report",
+      "description": "",
+      "summary": "A PHP project that uses Composer for dependency management and PHPUnit for testing. It requires MySQL database setup and environment configuration via .env file before running tests.",
+      "html_url": "https://github.com/gabrielkoerich/report",
+      "private": true,
+      "languages": [
+        {
+          "name": "PHP",
+          "color": "#4F5D95"
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2026-02-13T21:54:16Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "testing",
+      "description": "",
+      "summary": "A Laravel backend assignment implementing an NBA database schema for storing players, teams, and games with optimized queries for frequent lookups by date/team and player statistics. The project includes database migrations defining relationships between teams, players, games, and game events using Laravel's Blueprint syntax.",
+      "html_url": "https://github.com/gabrielkoerich/testing",
+      "private": true,
+      "languages": [
+        {
+          "name": "PHP",
+          "color": "#4F5D95"
+        },
+        {
+          "name": "Blade",
+          "color": "#f7523f"
+        },
+        {
+          "name": "Shell",
+          "color": "#89e051"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2026-02-13T21:52:16Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "partners",
+      "description": "",
+      "summary": "A PHP project with partner controller functionality tested using PHPUnit. The project includes a feature test suite for the PartnerController class that can be executed via Composer's vendor binaries.",
+      "html_url": "https://github.com/gabrielkoerich/partners",
+      "private": true,
+      "languages": [
+        {
+          "name": "PHP",
+          "color": "#4F5D95"
+        },
+        {
+          "name": "Blade",
+          "color": "#f7523f"
+        },
+        {
+          "name": "Shell",
+          "color": "#89e051"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2026-02-13T21:51:25Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "private",
+      "description": "",
+      "summary": "A collection of utilities for managing privacy and backup operations. Tools designed to help protect sensitive data and maintain secure backups across systems. Provides command-line interfaces for automating privacy-focused and backup-related tasks.",
+      "html_url": "https://github.com/gabrielkoerich/private",
+      "private": true,
+      "languages": [
+        {
+          "name": "Shell",
+          "color": "#89e051"
+        },
+        {
+          "name": "AppleScript",
+          "color": "#58a6ff"
+        },
+        {
+          "name": "Just",
+          "color": "#58a6ff"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2026-02-09T13:28:26Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "content-course",
+      "description": "Content Course landing page with Stripe & Solana payments",
+      "summary": "A landing page for selling digital courses that accepts payments via both Stripe and Solana, built with Nuxt.js 3 and Tailwind CSS. The project offers two pricing options\u2014$97 via credit card or 1 SOL via blockchain\u2014with optional Supabase integration for managing course access. It's designed for high conversion with responsive design, security best practices, and deployment-ready setup for Vercel.",
+      "html_url": "https://github.com/gabrielkoerich/content-course",
+      "private": true,
+      "languages": [
+        {
+          "name": "Vue",
+          "color": "#41b883"
+        },
+        {
+          "name": "PLpgSQL",
+          "color": "#58a6ff"
+        },
+        {
+          "name": "TypeScript",
+          "color": "#3178c6"
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2026-01-30T18:04:28Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "portfolio-guardian-saas",
+      "description": "Portfolio Guardian SaaS - Monitor your Solana portfolio 24/7 with AI-powered insights",
+      "summary": "A full-stack SaaS application built with Nuxt.js and Supabase that monitors Solana cryptocurrency portfolios in real-time, providing AI-powered insights, P&L tracking, and automated alerts across multiple subscription tiers. Users can connect multiple wallets, track perpetual positions on Drift, receive Telegram notifications, and access historical portfolio data with authentication via email, GitHub, or Google OAuth. The application is designed for deployment on Vercel with features like asset allocation charts, daily reports, and position tracking for serious crypto investors.",
+      "html_url": "https://github.com/gabrielkoerich/portfolio-guardian-saas",
+      "private": true,
+      "languages": [
+        {
+          "name": "Vue",
+          "color": "#41b883"
+        },
+        {
+          "name": "PLpgSQL",
+          "color": "#58a6ff"
+        },
+        {
+          "name": "TypeScript",
+          "color": "#3178c6"
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2026-01-30T17:59:16Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "quant",
+      "description": "",
+      "summary": "A quantitative finance project for analyzing and managing financial data. The codebase appears to be in early stages of development with foundational structure being established. Likely used for building trading strategies, market analysis, or portfolio management tools.",
+      "html_url": "https://github.com/gabrielkoerich/quant",
+      "private": true,
+      "languages": [],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2026-01-11T02:18:55Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "mind",
+      "description": "mind palace / writing / notes",
+      "summary": "",
+      "html_url": "https://github.com/gabrielkoerich/mind",
+      "private": true,
+      "languages": [],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2026-01-11T02:09:50Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "portfolio",
+      "description": "Portfolio Manager with multiple strategies with backtests, allocation checks + warning, suggestions for increase/decrease/exit/hedge positions. Deploy strategy using Docker. Built with rust with main focus execution on Solana, using Perps, borrow/lend and yield protocols.",
+      "summary": "A Rust-based portfolio manager that executes multiple trading strategies on Solana with support for perpetual futures, lending protocols, and yield farming. The system provides backtesting capabilities, allocation monitoring with warnings, and actionable position recommendations. It deploys as a containerized application with comprehensive risk management features.",
+      "html_url": "https://github.com/gabrielkoerich/portfolio",
+      "private": true,
+      "languages": [],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2025-12-24T12:18:36Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "passivbot",
+      "description": "",
+      "summary": "A cryptocurrency trading bot written in Python and Rust that automatically places and cancels limit orders across multiple exchanges (Binance, Bybit, OKX, Bitget, GateIO, Kucoin, Hyperliquid, and Drift) using a contrarian market-making strategy based on grid orders and trailing entries/closes. It employs a Martingale-inspired approach to double down on losing positions and includes backtesting and optimization tools powered by Rust for performance. The bot operates autonomously with minimal user intervention, managing positions through dynamic volatility analysis and an unstucking mechanism for underperforming trades.",
+      "html_url": "https://github.com/gabrielkoerich/passivbot",
+      "private": true,
+      "languages": [
+        {
+          "name": "Python",
+          "color": "#3572A5"
+        },
+        {
+          "name": "Rust",
+          "color": "#dea584"
+        },
+        {
+          "name": "Jupyter Notebook",
+          "color": "#DA5B0B"
+        },
+        {
+          "name": "Just",
+          "color": "#58a6ff"
+        },
+        {
+          "name": "Dockerfile",
+          "color": "#384d54"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2025-10-19T22:28:20Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "home",
+      "description": "Home Containers",
+      "summary": "A collection of containerized services for home server infrastructure and management. This project provides Docker container configurations for running various applications and services in a home environment. It enables easy deployment and orchestration of multiple services through container technology.",
+      "html_url": "https://github.com/gabrielkoerich/home",
+      "private": true,
+      "languages": [
+        {
+          "name": "TypeScript",
+          "color": "#3178c6"
+        },
+        {
+          "name": "Shell",
+          "color": "#89e051"
+        },
+        {
+          "name": "Python",
+          "color": "#3572A5"
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        },
+        {
+          "name": "CSS",
+          "color": "#563d7c"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2025-10-15T21:06:58Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "baby-smith",
+      "description": "",
+      "summary": "A comprehensive modular autonomous trading agent for Hyperliquid perpetual futures featuring advanced market making, risk management, and real-time monitoring capabilities. The v2.0 refactored architecture provides clean separation of concerns with full type safety and enhanced error handling. Operates as experimental software that can autonomously trade with real money and requires careful risk management.",
+      "html_url": "https://github.com/gabrielkoerich/baby-smith",
+      "private": true,
+      "languages": [
+        {
+          "name": "Python",
+          "color": "#3572A5"
+        },
+        {
+          "name": "Dockerfile",
+          "color": "#384d54"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2025-10-01T18:43:21Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "bliv",
+      "description": "",
+      "summary": "A Solana-based DeFi platform that liberates yield opportunities through smart contracts and a web frontend. The project includes Rust/Anchor smart contracts deployed to a local Solana validator, a Next.js frontend running on localhost:4000, and a CLI tool for managing demo markets and token airdrops. Built with Yarn for package management and Just as a task runner for development workflows.",
+      "html_url": "https://github.com/gabrielkoerich/bliv",
+      "private": true,
+      "languages": [
+        {
+          "name": "TypeScript",
+          "color": "#3178c6"
+        },
+        {
+          "name": "Rust",
+          "color": "#dea584"
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        },
+        {
+          "name": "Just",
+          "color": "#58a6ff"
+        },
+        {
+          "name": "CSS",
+          "color": "#563d7c"
+        },
+        {
+          "name": "SCSS",
+          "color": "#c6538c"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2024-07-02T01:00:11Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "mev",
+      "description": "",
+      "summary": "A Rust-based MEV bot framework that provides reusable Jito searcher and geyser protocol implementations for building backrun arbitrage strategies on Solana. It includes a pre-built backrun arb bot that monitors the mempool for large trades and executes profitable circular arbitrage across multiple DEX platforms like Raydium and Orca. The template eliminates boilerplate setup by pinning shared dependencies and protobuf implementations across searcher, geyser, and bot components.",
+      "html_url": "https://github.com/gabrielkoerich/mev",
+      "private": true,
+      "languages": [
+        {
+          "name": "TypeScript",
+          "color": "#3178c6"
+        },
+        {
+          "name": "Rust",
+          "color": "#dea584"
+        },
+        {
+          "name": "Jupyter Notebook",
+          "color": "#DA5B0B"
+        },
+        {
+          "name": "Just",
+          "color": "#58a6ff"
+        },
+        {
+          "name": "Dockerfile",
+          "color": "#384d54"
+        },
+        {
+          "name": "Shell",
+          "color": "#89e051"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2023-07-05T17:25:14Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "fundamentando",
+      "description": "",
+      "summary": "A Laravel web application framework providing expressive syntax and elegant tooling for building robust, scalable applications. It simplifies common development tasks through features like routing, dependency injection, ORM database interactions, migrations, job processing, and real-time event broadcasting. The framework is designed to make web development enjoyable and accessible while maintaining the power needed for large-scale projects.",
+      "html_url": "https://github.com/gabrielkoerich/fundamentando",
+      "private": true,
+      "languages": [
+        {
+          "name": "PHP",
+          "color": "#4F5D95"
+        },
+        {
+          "name": "Vue",
+          "color": "#41b883"
+        },
+        {
+          "name": "Blade",
+          "color": "#f7523f"
+        },
+        {
+          "name": "Shell",
+          "color": "#89e051"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2023-06-11T01:04:48Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "defi-automator",
+      "description": "Manage your DeFi like a quant fund",
+      "summary": "A Solana-based tool that automates DeFi portfolio management by creating and rebalancing concentrated liquidity positions on Orca Whirlpools using algorithmic strategies. It automatically collects fees and rewards while supporting multiple positioning strategies like One Tick Upper/Lower, with plans to expand to additional protocols and chains. The project is currently in development with core features like multi-position handling, token swaps, and performance calculations still being implemented.",
+      "html_url": "https://github.com/gabrielkoerich/defi-automator",
+      "private": true,
+      "languages": [
+        {
+          "name": "TypeScript",
+          "color": "#3178c6"
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        },
+        {
+          "name": "Just",
+          "color": "#58a6ff"
+        },
+        {
+          "name": "Rust",
+          "color": "#dea584"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2023-04-17T19:42:17Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "bovespa.io",
+      "description": "bovespa.io",
+      "summary": "A Laravel-based PHP application called Fundamentando that provides stock market data and analytics for bovespa.io. The project includes a backend API with database migrations, comprehensive testing via PHPUnit, and a frontend built with Node.js, Bower, and Gulp. It supports both development and production environments with configurable dependencies and includes code coverage reporting capabilities.",
+      "html_url": "https://github.com/gabrielkoerich/bovespa.io",
+      "private": true,
+      "languages": [
+        {
+          "name": "PHP",
+          "color": "#4F5D95"
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        },
+        {
+          "name": "CSS",
+          "color": "#563d7c"
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2023-04-17T19:22:17Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "solana-nft-marketplace",
+      "description": "NFT marketplace contract on Solana",
+      "summary": "A Solana-based NFT marketplace contract built with Anchor 0.18.2 that enables users to list NFTs, update prices, purchase items, and automatically handle marketplace fees and royalty payments. Originally created for a hackathon in 2021, the contract provides core marketplace functionality including listing cancellations and purchase processing on the Solana blockchain.",
+      "html_url": "https://github.com/gabrielkoerich/solana-nft-marketplace",
+      "private": true,
+      "languages": [
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        },
+        {
+          "name": "Rust",
+          "color": "#dea584"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2022-10-26T18:25:03Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "projects",
+      "description": "",
+      "summary": "A personal portfolio and projects website built with static site generation. The repository contains templates, styling, and configuration for a GitHub Pages-hosted portfolio site.",
+      "html_url": "https://github.com/gabrielkoerich/projects",
+      "private": true,
+      "languages": [],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2021-11-03T21:40:20Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "classification",
+      "description": "",
+      "summary": "A Laravel application that classifies company attributes using a classification system. The project includes a Company model, an AttributionClassifier for processing attribute assignments, and a Classification service for managing the classification logic, with full test coverage via PHPUnit.",
+      "html_url": "https://github.com/gabrielkoerich/classification",
+      "private": true,
+      "languages": [
+        {
+          "name": "PHP",
+          "color": "#4F5D95"
+        },
+        {
+          "name": "Blade",
+          "color": "#f7523f"
+        },
+        {
+          "name": "Shell",
+          "color": "#89e051"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2021-03-07T21:13:17Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "cross-domain",
+      "description": "",
+      "summary": "A PHP micro-framework for building web applications with expressive syntax, offering fast performance and built-in support for routing, database abstraction, queueing, and caching. Lumen is designed to simplify common web development tasks while maintaining code elegance and developer productivity.",
+      "html_url": "https://github.com/gabrielkoerich/cross-domain",
+      "private": true,
+      "languages": [
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        },
+        {
+          "name": "PHP",
+          "color": "#4F5D95"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2019-10-30T18:40:26Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "bulldesk-gridsome",
+      "description": "",
+      "summary": "A Gridsome starter project that combines Vue.js, GraphQL, and Bootstrap to generate static websites with built-in CMS integration via Forestry.io, Netlify forms, and markdown-based content management. It's designed for quick deployment on Netlify with automatic sitemap generation, Google Analytics support, and a fully functional admin interface for content editing. The project uses Sass for styling and comes pre-configured for GitHub integration, requiring minimal setup to get a production-ready static site running.",
+      "html_url": "https://github.com/gabrielkoerich/bulldesk-gridsome",
+      "private": true,
+      "languages": [
+        {
+          "name": "Vue",
+          "color": "#41b883"
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        },
+        {
+          "name": "CSS",
+          "color": "#563d7c"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2019-06-03T20:00:06Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "three",
+      "description": "",
+      "summary": "WordPress is a semantic personal publishing platform that provides a famous 5-minute installation process for setting up a blog with database configuration and automatic updates. It includes tools for managing blog content, user authentication, and database table setup through an intuitive web-based installer.",
+      "html_url": "https://github.com/gabrielkoerich/three",
+      "private": true,
+      "languages": [
+        {
+          "name": "PHP",
+          "color": "#4F5D95"
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        },
+        {
+          "name": "CSS",
+          "color": "#563d7c"
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        },
+        {
+          "name": "ApacheConf",
+          "color": "#58a6ff"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2017-10-11T18:21:49Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "koerich-consultoria",
+      "description": "",
+      "summary": "A WordPress installation guide document in Portuguese for version 4.7, providing setup instructions and administrative information for a personal semantic publishing platform called LeiaMe.",
+      "html_url": "https://github.com/gabrielkoerich/koerich-consultoria",
+      "private": true,
+      "languages": [
+        {
+          "name": "PHP",
+          "color": "#4F5D95"
+        },
+        {
+          "name": "CSS",
+          "color": "#563d7c"
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        },
+        {
+          "name": "ApacheConf",
+          "color": "#58a6ff"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2017-05-20T20:59:40Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "iafut-backend",
+      "description": "",
+      "summary": "A PHP archetype using the Slim framework, Twig templating, Eloquent ORM, and Phinx migrations designed as a base template for TodoBit projects, configured to run on Vagrant for rapid development. The project includes database configuration, PSR-4 compliant class structure, and automated VM setup with MySQL, providing a standardized foundation for PHP web application development.",
+      "html_url": "https://github.com/gabrielkoerich/iafut-backend",
+      "private": true,
+      "languages": [
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        },
+        {
+          "name": "PHP",
+          "color": "#4F5D95"
+        },
+        {
+          "name": "CSS",
+          "color": "#563d7c"
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        },
+        {
+          "name": "Shell",
+          "color": "#89e051"
+        },
+        {
+          "name": "ApacheConf",
+          "color": "#58a6ff"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2017-05-19T20:25:22Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "algorit.com.br",
+      "description": "",
+      "summary": "A portfolio or business website for algorit.com.br. The project appears to be a static site built with a modern web framework, based on the presence of configuration files like config.toml and template directories. It's currently under active development with recent commits for site customization and DNS configuration.",
+      "html_url": "https://github.com/gabrielkoerich/algorit.com.br",
+      "private": true,
+      "languages": [
+        {
+          "name": "PHP",
+          "color": "#4F5D95"
+        },
+        {
+          "name": "CSS",
+          "color": "#563d7c"
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        },
+        {
+          "name": "ApacheConf",
+          "color": "#58a6ff"
+        }
+      ],
+      "stargazers_count": 0,
+      "topics": [],
+      "updated_at": "2015-05-04T03:34:43Z",
+      "archived": false,
+      "fork": false
+    }
+  ]
+}
