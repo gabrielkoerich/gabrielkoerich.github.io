@@ -90,6 +90,12 @@ header h1 a:hover {
     opacity: 0.7;
 }
 
+.breadcrumb-sep {
+    color: var(--border-color);
+    font-weight: 400;
+    margin: 0 0.2rem;
+}
+
 .header-contact {
     display: flex;
     gap: 1rem;
