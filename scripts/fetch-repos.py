@@ -173,9 +173,9 @@ def summarize_with_claude(repo_name, description, readme_content):
             # Strip "summary:" prefix if present
             if re.match(r"^.*?summary[:\s]", summary[:60], re.IGNORECASE):
                 summary = re.sub(r"^.*?summary[:\s]+", "", summary, count=1, flags=re.IGNORECASE)
-            # Reject if LLM refused or asked for access
+            # Reject if LLM refused, asked for access, or gave a vague answer
             reject = re.search(
-                r"(I don't have|I need access|Could you|I cannot|I can't|provide me|access to the repo|clarify which|Do you have|Once I have|I'll need|you want summarized|Can you provide|I see this is)",
+                r"(I don't have|I need access|Could you|I cannot|I can't|provide me|access to the repo|clarify which|Do you have|Once I have|I'll need|you want summarized|Can you provide|I see this is|not documented|appears to be|though specific|functionality details)",
                 summary, re.IGNORECASE
             )
             if reject:
@@ -216,6 +216,9 @@ BLACKLIST = {
     "fundamentando",
     "testing",
     "projects",
+    "report",
+    "partners",
+    "iafut-backend",
 }
 
 
@@ -260,8 +263,20 @@ def main():
 
         languages, lang_bytes = fetch_languages(token, owner, name)
         pages_url = fetch_pages_url(token, owner, name)
+
+        # Fallback for repos with a site but no useful summary
+        if not summary and pages_url:
+            summary = f"Website for {name}."
+        elif not summary and ("." in name or name.endswith("-io")):
+            summary = f"Website for {name.replace('.', ' ').replace('-', ' ')}."
+        # Weight adjustments and exclusions for aggregate chart
+        LANG_HIDE = {"HTML", "CSS"}
+        LANG_WEIGHT = {"Jupyter Notebook": 0.1, "Rust": 2}
         for lang, bytes_count in lang_bytes.items():
-            all_lang_bytes[lang] = all_lang_bytes.get(lang, 0) + bytes_count
+            if lang in LANG_HIDE:
+                continue
+            weight = LANG_WEIGHT.get(lang, 1)
+            all_lang_bytes[lang] = all_lang_bytes.get(lang, 0) + int(bytes_count * weight)
 
         results.append({
             "name": name,
@@ -279,9 +294,9 @@ def main():
             "fork": repo.get("fork", False),
         })
 
-    # Sort by update year (descending), then stars within each year (descending)
+    # Sort by creation year (descending), then stars within each year (descending)
     results.sort(key=lambda r: r["stargazers_count"], reverse=True)
-    results.sort(key=lambda r: int(r["updated_at"][:4]), reverse=True)
+    results.sort(key=lambda r: int(r["created_at"][:4]), reverse=True)
 
     # Aggregate language breakdown
     total_bytes = sum(all_lang_bytes.values()) or 1

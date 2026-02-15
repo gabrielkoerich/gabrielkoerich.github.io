@@ -19,7 +19,7 @@
 
 {% set current_year = "" %}
 {% for repo in data.repos %}
-    {% set repo_year = repo.updated_at | truncate(length=4, end="") %}
+    {% set repo_year = repo.created_at | truncate(length=4, end="") %}
     {% if repo_year != current_year %}
         {% if current_year != "" %}</ul>{% endif %}
         {% set_global current_year = repo_year %}
