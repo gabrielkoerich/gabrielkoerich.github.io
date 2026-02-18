@@ -1,39 +1,35 @@
-# gabrielkoerich.github.io
+# [gabrielkoerich.github.io](https://gabrielkoerich.com/projects)
 
-Personal projects and repositories website for Gabriel Koerich.
+A self-updating portfolio that pulls my GitHub repos, generates project summaries with Claude, and publishes a clean static site — rebuilt daily.
 
-Live URL: https://gabrielkoerich.com/projects
+## How it works
 
-## What It Is
+A Python script queries the GitHub API for every repo I own, fetches language stats, and optionally sends each README through Claude (Haiku) to produce concise two-sentence descriptions. The output lands in two JSON files — one for repo metadata, one for summaries — which Zola picks up at build time to render a single-page site grouped by year, complete with an aggregate language bar, star counts, and direct links.
 
-This repository contains the source code for a static site that lists repositories, shows project summaries, and displays language usage across projects.
+GitHub Actions runs the full pipeline on every push and once a day on a cron schedule.
 
-## What It Does
+```
+scripts/fetch-repos.py  →  data/repos.json
+                            data/repo-descriptions.json
+templates/index.html     →  reads both JSON files
+zola build               →  static site in public/
+```
 
-- Builds and publishes a projects page using Zola.
-- Shows repository metadata such as stars, last update date, languages, and links.
-- Uses a separate descriptions dataset for long-form repository summaries.
-- Deploys to GitHub Pages on push and on a daily schedule.
+## Development
 
-## How It Works
+```sh
+just serve          # local dev server with live reload
+just build          # fetch repos + build site
+just fetch-repos    # refresh repo metadata only
+```
 
-1. `scripts/fetch-repos.py` fetches repository metadata from the GitHub API and writes `data/repos.json`.
-2. LLM-generated summaries are stored separately in `data/repo-descriptions.json`.
-3. `templates/index.html` loads both files and renders:
-   - summary from `repo-descriptions.json` when available
-   - GitHub description as fallback
-4. Zola builds the static site from templates + data.
-5. GitHub Actions (`.github/workflows/deploy.yml`) runs scheduled and push builds.
+To regenerate LLM summaries:
 
-## Common Commands
+```sh
+just fetch-repos-summaries        # refresh missing/stale summaries
+just fetch-repos-summaries-force  # regenerate all from scratch
+```
 
-- `just fetch-repos`: refresh metadata only (no LLM).
-- `just fetch-repos-summaries`: refresh metadata and summaries.
-- `just fetch-repos-summaries-force`: regenerate all summaries.
-- `just build`: fetch metadata and build site.
-- `just serve`: run local dev server.
+## Stack
 
-## Notes
-
-- The workflow uses `REPOS_TOKEN` to fetch owned repositories (including private repos metadata as needed for rendering).
-- The default workflow fetch step does not call LLM.
+[Zola](https://www.getzola.org) for static site generation, plain HTML/CSS templates, Python for data fetching, and GitHub Actions for CI/CD. No JavaScript frameworks. Summaries powered by [Claude](https://claude.ai) via the `claude` CLI.
