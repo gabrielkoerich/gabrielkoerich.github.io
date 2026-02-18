@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 """Fetch GitHub repos metadata and optionally refresh LLM summaries."""
 
+import base64
 import json
 import os
 import re
 import subprocess
 import sys
-import base64
 from pathlib import Path
-from urllib.request import Request, urlopen
 from urllib.error import HTTPError
-
+from urllib.request import Request, urlopen
 
 # GitHub language colors (common ones)
 LANG_COLORS = {
@@ -62,7 +61,10 @@ def get_token():
     if token:
         return token
 
-    print("Error: No GitHub token found. Run 'gh auth login' or set GITHUB_TOKEN.", file=sys.stderr)
+    print(
+        "Error: No GitHub token found. Run 'gh auth login' or set GITHUB_TOKEN.",
+        file=sys.stderr,
+    )
     sys.exit(1)
 
 
@@ -84,7 +86,9 @@ def api_get(url, token):
 def fetch_all_repos(token):
     """Fetch all repos with pagination."""
     repos = []
-    url = "https://api.github.com/user/repos?per_page=100&sort=updated&affiliation=owner"
+    url = (
+        "https://api.github.com/user/repos?per_page=100&sort=updated&affiliation=owner"
+    )
 
     while url:
         data, headers = api_get(url, token)
@@ -159,24 +163,34 @@ def summarize_with_claude(repo_name, description, readme_content):
         env = {k: v for k, v in os.environ.items() if k != "CLAUDECODE"}
         result = subprocess.run(
             ["claude", "-p", "--model", "haiku", prompt],
-            capture_output=True, text=True, timeout=30, env=env, cwd="/tmp",
+            capture_output=True,
+            text=True,
+            timeout=30,
+            env=env,
+            cwd="/tmp",
         )
         if result.returncode == 0:
             summary = result.stdout.strip()
-            summary = summary.strip('"\'')
+            summary = summary.strip("\"'")
             # Strip LLM preamble if present
             # Strip any LLM preamble
             summary = re.sub(
                 r"^(Based on[^,:.]*[,:.]?\s*|Here'?s?\s[^,:]*[,:]\s*|I'd be happy[^.]*\.\s*|Sure[,!.]\s*|The README mentions[^.]*\.\s*)",
-                "", summary, count=1, flags=re.IGNORECASE
+                "",
+                summary,
+                count=1,
+                flags=re.IGNORECASE,
             ).lstrip(" .,:-\n")
             # Strip "summary:" prefix if present
             if re.match(r"^.*?summary[:\s]", summary[:60], re.IGNORECASE):
-                summary = re.sub(r"^.*?summary[:\s]+", "", summary, count=1, flags=re.IGNORECASE)
+                summary = re.sub(
+                    r"^.*?summary[:\s]+", "", summary, count=1, flags=re.IGNORECASE
+                )
             # Reject if LLM refused, asked for access, or gave a vague answer
             reject = re.search(
                 r"(I don't have|I need access|Could you|I cannot|I can't|provide me|access to the repo|clarify which|Do you have|Once I have|I'll need|you want summarized|Can you provide|I see this is|not documented|appears to be|though specific|functionality details|no available description|no available README|without documented|no description or README|not enough information)",
-                summary, re.IGNORECASE
+                summary,
+                re.IGNORECASE,
             )
             if reject:
                 return None
@@ -201,34 +215,37 @@ def load_summary_cache(desc_path):
 def save_summary_cache(desc_path, summaries):
     """Persist LLM summaries to disk."""
     payload = {
-        "summaries": {name: summaries[name] for name in sorted(summaries)},
+        "summaries": {
+            name: summaries[name] for name in sorted(summaries) if name not in BLACKLIST
+        },
     }
     desc_path.parent.mkdir(parents=True, exist_ok=True)
     desc_path.write_text(json.dumps(payload, indent=2) + "\n")
 
 
 BLACKLIST = {
-    "oblivion",
-    "nasc",
-    "iter-landing-page",
+    "abramis",
     "acupunturafloripa",
     "algorit-wp-theme",
     "bulldesk-cf7-integration",
     "bulldesk-site",
+    "cross-domain",
+    "formabella",
+    "fundamentando",
+    "iafut-backend",
     "iter",
-    "tracelog",
+    "iter-landing-page",
+    "koerich-consultoria",
     "medical",
     "momentodohler",
-    "formabella",
-    "three",
-    "koerich-consultoria",
-    "fundamentando",
-    "testing",
+    "nasc",
+    "oblivion",
+    "partners",
     "projects",
     "report",
-    "partners",
-    "iafut-backend",
-    "cross-domain",
+    "testing",
+    "three",
+    "tracelog",
     "web3-backup-template",
 }
 
@@ -261,9 +278,11 @@ def main():
         summary = summary_cache.get(name, "")
         if summary and not force:
             cache_hits += 1
-            print(f"  [{i+1}/{len(repos)}] {name} (summary cached)", file=sys.stderr)
+            print(f"  [{i + 1}/{len(repos)}] {name} (summary cached)", file=sys.stderr)
         elif refresh_summaries:
-            print(f"  [{i+1}/{len(repos)}] {name} (refreshing summary)", file=sys.stderr)
+            print(
+                f"  [{i + 1}/{len(repos)}] {name} (refreshing summary)", file=sys.stderr
+            )
             homepage = repo.get("homepage") or ""
             readme = fetch_readme(token, owner, name)
             readme_is_thin = not readme or len(readme.strip()) < 20
@@ -276,7 +295,10 @@ def main():
                     summary = ""
                     print(f"    -> no README, using description", file=sys.stderr)
                 else:
-                    print(f"    -> skipped summary (no README or description)", file=sys.stderr)
+                    print(
+                        f"    -> skipped summary (no README or description)",
+                        file=sys.stderr,
+                    )
                     summary = ""
             else:
                 summary = summarize_with_claude(name, description, readme) or ""
@@ -284,7 +306,7 @@ def main():
             summary_cache_updated[name] = summary
             generated += 1
         else:
-            print(f"  [{i+1}/{len(repos)}] {name}", file=sys.stderr)
+            print(f"  [{i + 1}/{len(repos)}] {name}", file=sys.stderr)
 
         languages, lang_bytes = fetch_languages(token, owner, name)
         pages_url = fetch_pages_url(token, owner, name)
@@ -296,26 +318,29 @@ def main():
             if lang in LANG_HIDE:
                 continue
             weight = LANG_WEIGHT.get(lang, 1)
-            all_lang_bytes[lang] = all_lang_bytes.get(lang, 0) + int(bytes_count * weight)
+            all_lang_bytes[lang] = all_lang_bytes.get(lang, 0) + int(
+                bytes_count * weight
+            )
 
-        results.append({
-            "name": name,
-            "description": description,
-            "html_url": repo["html_url"],
-            "private": repo["private"],
-            "languages": languages,
-            "pages_url": pages_url or "",
-            "stargazers_count": repo.get("stargazers_count", 0),
-            "topics": repo.get("topics", []),
-            "created_at": repo["created_at"],
-            "updated_at": repo["updated_at"],
-            "archived": repo.get("archived", False),
-            "fork": repo.get("fork", False),
-        })
+        results.append(
+            {
+                "name": name,
+                "description": description,
+                "html_url": repo["html_url"],
+                "private": repo["private"],
+                "languages": languages,
+                "pages_url": pages_url or "",
+                "stargazers_count": repo.get("stargazers_count", 0),
+                "topics": repo.get("topics", []),
+                "created_at": repo["created_at"],
+                "updated_at": repo["updated_at"],
+                "archived": repo.get("archived", False),
+                "fork": repo.get("fork", False),
+            }
+        )
 
-    # Sort by creation year (descending), then stars within each year (descending)
-    results.sort(key=lambda r: r["stargazers_count"], reverse=True)
-    results.sort(key=lambda r: int(r["created_at"][:4]), reverse=True)
+    # Sort alphabetically by name for stable, diff-friendly output
+    results.sort(key=lambda r: r["name"].lower())
 
     # Aggregate language breakdown
     total_bytes = sum(all_lang_bytes.values()) or 1
@@ -325,30 +350,39 @@ def main():
     for lang, bytes_count in lang_sorted:
         pct = round(bytes_count / total_bytes * 100, 1)
         if pct >= 0.5:
-            lang_breakdown.append({
-                "name": lang,
-                "color": LANG_COLORS.get(lang, "#58a6ff"),
-                "percentage": pct,
-            })
+            lang_breakdown.append(
+                {
+                    "name": lang,
+                    "color": LANG_COLORS.get(lang, "#58a6ff"),
+                    "percentage": pct,
+                }
+            )
         else:
             other_pct += pct
 
     if other_pct > 0:
-        lang_breakdown.append({
-            "name": "Other",
-            "color": "#8b949e",
-            "percentage": round(other_pct, 1),
-        })
+        lang_breakdown.append(
+            {
+                "name": "Other",
+                "color": "#8b949e",
+                "percentage": round(other_pct, 1),
+            }
+        )
 
     output = {"languages": lang_breakdown, "repos": results}
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(output, indent=2))
+    out_path.write_text(json.dumps(output, indent=2) + "\n")
 
     if refresh_summaries:
         save_summary_cache(desc_path, summary_cache_updated)
-        print(f"Wrote summaries to {desc_path} ({generated} refreshed)", file=sys.stderr)
+        print(
+            f"Wrote summaries to {desc_path} ({generated} refreshed)", file=sys.stderr
+        )
 
-    print(f"Wrote {len(results)} repos ({cache_hits} summary cache hits) to {out_path}", file=sys.stderr)
+    print(
+        f"Wrote {len(results)} repos ({cache_hits} summary cache hits) to {out_path}",
+        file=sys.stderr,
+    )
 
 
 if __name__ == "__main__":

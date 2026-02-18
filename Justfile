@@ -18,6 +18,12 @@ build: fetch-repos
 serve:
     zola serve
 
+# Serve with live-reload and open browser
+watch:
+    zola serve --open
+
+alias dev := watch
+
 # Deploy: build and push to master
 deploy: build
     git add -A

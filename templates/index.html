@@ -18,8 +18,9 @@
 
 <p class="repo-count">{{ data.repos | length }} repositories</p>
 
+{% set repos_sorted = data.repos | sort(attribute="created_at") | reverse %}
 {% set current_year = "" %}
-{% for repo in data.repos %}
+{% for repo in repos_sorted %}
     {% set repo_summary = descriptions.summaries | get(key=repo.name, default="") %}
     {% set repo_year = repo.created_at | truncate(length=4, end="") %}
     {% if repo_year != current_year %}
