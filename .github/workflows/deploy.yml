@@ -19,13 +19,20 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      REPOS_TOKEN: ${{ secrets.REPOS_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
       - name: Fetch repos
+        if: ${{ env.REPOS_TOKEN != '' }}
         env:
-          GH_TOKEN: ${{ secrets.REPOS_TOKEN }}
+          GH_TOKEN: ${{ env.REPOS_TOKEN }}
         run: python3 scripts/fetch-repos.py
+
+      - name: Skip repo refresh (REPOS_TOKEN missing)
+        if: ${{ env.REPOS_TOKEN == '' }}
+        run: echo "REPOS_TOKEN is not configured. Skipping repo metadata refresh."
 
       - name: Install Zola
         uses: taiki-e/install-action@v2
