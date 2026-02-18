@@ -75,12 +75,15 @@ def api_get(url, token):
     req.add_header("Accept", "application/vnd.github.v3+json")
     req.add_header("User-Agent", "fetch-repos-script")
     try:
-        with urlopen(req) as resp:
+        with urlopen(req, timeout=15) as resp:
             return json.loads(resp.read()), resp.headers
     except HTTPError as e:
         if e.code == 404:
             return None, {}
         raise
+    except OSError as e:
+        print(f"  Network error fetching {url}: {e}", file=sys.stderr)
+        return None, {}
 
 
 def fetch_all_repos(token):

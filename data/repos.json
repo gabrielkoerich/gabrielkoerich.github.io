@@ -3,17 +3,17 @@
     {
       "name": "TypeScript",
       "color": "#3178c6",
-      "percentage": 29.4
+      "percentage": 29.5
     },
     {
       "name": "Rust",
       "color": "#dea584",
-      "percentage": 15.6
+      "percentage": 15.7
     },
     {
       "name": "PHP",
       "color": "#4F5D95",
-      "percentage": 13.4
+      "percentage": 13.5
     },
     {
       "name": "Jupyter Notebook",
@@ -23,17 +23,17 @@
     {
       "name": "Python",
       "color": "#3572A5",
-      "percentage": 12.3
+      "percentage": 12.4
     },
     {
       "name": "JavaScript",
       "color": "#f1e05a",
-      "percentage": 8.7
+      "percentage": 8.1
     },
     {
       "name": "Shell",
       "color": "#89e051",
-      "percentage": 4.7
+      "percentage": 4.8
     },
     {
       "name": "Vue",
@@ -47,34 +47,6 @@
     }
   ],
   "repos": [
-    {
-      "name": "abramis",
-      "description": "",
-      "html_url": "https://github.com/gabrielkoerich/abramis",
-      "private": true,
-      "languages": [
-        {
-          "name": "JavaScript",
-          "color": "#f1e05a"
-        },
-        {
-          "name": "CSS",
-          "color": "#563d7c"
-        },
-        {
-          "name": "HTML",
-          "color": "#e34c26"
-        }
-      ],
-      "pages_url": "",
-      "stargazers_count": 0,
-      "topics": [],
-      "created_at": "2017-11-06T15:12:50Z",
-      "updated_at": "2017-11-06T15:21:13Z",
-      "archived": false,
-      "fork": false,
-      "display_order": 42
-    },
     {
       "name": "addressing",
       "description": "Brazilian postalcode to address in a service manager.",
@@ -93,7 +65,7 @@
       "updated_at": "2025-02-20T17:42:53Z",
       "archived": false,
       "fork": false,
-      "display_order": 50
+      "display_order": 49
     },
     {
       "name": "algorit",
@@ -129,7 +101,7 @@
       "updated_at": "2017-03-06T19:24:08Z",
       "archived": false,
       "fork": false,
-      "display_order": 52
+      "display_order": 51
     },
     {
       "name": "algorit.com.br",
@@ -161,7 +133,7 @@
       "updated_at": "2015-05-04T03:34:43Z",
       "archived": false,
       "fork": false,
-      "display_order": 56
+      "display_order": 55
     },
     {
       "name": "aposente.ai",
@@ -263,7 +235,7 @@
       "updated_at": "2017-01-06T02:03:10Z",
       "archived": false,
       "fork": false,
-      "display_order": 54
+      "display_order": 53
     },
     {
       "name": "bean",
@@ -296,7 +268,7 @@
       "stargazers_count": 2,
       "topics": [],
       "created_at": "2023-04-28T12:11:39Z",
-      "updated_at": "2026-02-17T20:14:45Z",
+      "updated_at": "2026-02-18T20:15:42Z",
       "archived": false,
       "fork": false,
       "display_order": 25
@@ -411,7 +383,7 @@
       "updated_at": "2023-04-17T19:22:17Z",
       "archived": false,
       "fork": false,
-      "display_order": 55
+      "display_order": 54
     },
     {
       "name": "bulldesk-gridsome",
@@ -519,7 +491,7 @@
       "updated_at": "2017-01-27T16:17:31Z",
       "archived": false,
       "fork": false,
-      "display_order": 47
+      "display_order": 46
     },
     {
       "name": "buscape",
@@ -539,7 +511,7 @@
       "updated_at": "2017-04-24T16:04:59Z",
       "archived": false,
       "fork": false,
-      "display_order": 46
+      "display_order": 45
     },
     {
       "name": "cashier-iugu",
@@ -559,7 +531,7 @@
       "updated_at": "2026-02-15T00:47:03Z",
       "archived": false,
       "fork": false,
-      "display_order": 53
+      "display_order": 52
     },
     {
       "name": "classification",
@@ -742,7 +714,7 @@
       "updated_at": "2026-02-18T16:30:28Z",
       "archived": false,
       "fork": false,
-      "display_order": 48
+      "display_order": 47
     },
     {
       "name": "gabrielkoerich",
@@ -807,10 +779,10 @@
       "stargazers_count": 1,
       "topics": [],
       "created_at": "2016-07-03T03:07:50Z",
-      "updated_at": "2026-02-18T14:41:30Z",
+      "updated_at": "2026-02-18T20:24:32Z",
       "archived": false,
       "fork": false,
-      "display_order": 49
+      "display_order": 48
     },
     {
       "name": "granatum-php",
@@ -900,10 +872,10 @@
       "stargazers_count": 0,
       "topics": [],
       "created_at": "2026-02-13T23:15:27Z",
-      "updated_at": "2026-02-18T17:45:03Z",
+      "updated_at": "2026-02-18T21:40:12Z",
       "archived": false,
       "fork": false,
-      "display_order": 5
+      "display_order": 4
     },
     {
       "name": "iafut",
@@ -931,7 +903,7 @@
       "updated_at": "2017-05-05T20:21:56Z",
       "archived": false,
       "fork": false,
-      "display_order": 45
+      "display_order": 44
     },
     {
       "name": "innbox",
@@ -967,7 +939,7 @@
       "updated_at": "2017-07-05T14:00:59Z",
       "archived": false,
       "fork": false,
-      "display_order": 43
+      "display_order": 42
     },
     {
       "name": "lighthouse",
@@ -1135,7 +1107,7 @@
         "orchestrator"
       ],
       "created_at": "2026-02-06T01:00:40Z",
-      "updated_at": "2026-02-18T17:43:39Z",
+      "updated_at": "2026-02-18T20:46:36Z",
       "archived": false,
       "fork": false,
       "display_order": 0
@@ -1374,7 +1346,7 @@
       "updated_at": "2023-04-17T19:21:57Z",
       "archived": false,
       "fork": false,
-      "display_order": 51
+      "display_order": 50
     },
     {
       "name": "skills",
@@ -1452,7 +1424,7 @@
       "updated_at": "2026-02-18T18:12:49Z",
       "archived": false,
       "fork": false,
-      "display_order": 4
+      "display_order": 6
     },
     {
       "name": "solana-nft",
@@ -1599,22 +1571,37 @@
       "updated_at": "2017-05-17T20:10:03Z",
       "archived": false,
       "fork": false,
-      "display_order": 44
+      "display_order": 43
     },
     {
       "name": "vault",
-      "description": "",
+      "description": "Lock down sensitive files whenever you want \u2014 encrypt with age, remove from disk, restore with one command.",
       "html_url": "https://github.com/gabrielkoerich/vault",
       "private": true,
-      "languages": [],
+      "languages": [
+        {
+          "name": "Shell",
+          "color": "#89e051"
+        },
+        {
+          "name": "Ruby",
+          "color": "#701516"
+        }
+      ],
       "pages_url": "",
       "stargazers_count": 0,
-      "topics": [],
+      "topics": [
+        "crypto",
+        "cryptography",
+        "encryption",
+        "privacy",
+        "security"
+      ],
       "created_at": "2026-02-18T16:03:25Z",
-      "updated_at": "2026-02-18T16:03:25Z",
+      "updated_at": "2026-02-18T20:42:10Z",
       "archived": false,
       "fork": false,
-      "display_order": 6
+      "display_order": 5
     }
   ]
 }

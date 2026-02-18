@@ -1,3 +1,7 @@
+# Default recipe - show available commands
+default:
+    @just --list
+
 # Fetch GitHub repos metadata only
 fetch-repos *args:
     python3 scripts/fetch-repos.py {{ args }}
