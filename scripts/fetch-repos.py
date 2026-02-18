@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch all GitHub repos (public + private) and extract README summaries."""
+"""Fetch GitHub repos metadata and optionally refresh LLM summaries."""
 
 import json
 import os
@@ -187,15 +187,24 @@ def summarize_with_claude(repo_name, description, readme_content):
     return None
 
 
-def load_cache(out_path):
-    """Load existing summaries as a cache keyed by repo name."""
-    if not out_path.exists():
+def load_summary_cache(desc_path):
+    """Load existing LLM summaries as a cache keyed by repo name."""
+    if not desc_path.exists():
         return {}
     try:
-        data = json.loads(out_path.read_text())
-        return {r["name"]: r.get("summary", "") for r in data.get("repos", [])}
+        data = json.loads(desc_path.read_text())
+        return data.get("summaries", {})
     except (json.JSONDecodeError, KeyError):
         return {}
+
+
+def save_summary_cache(desc_path, summaries):
+    """Persist LLM summaries to disk."""
+    payload = {
+        "summaries": {name: summaries[name] for name in sorted(summaries)},
+    }
+    desc_path.parent.mkdir(parents=True, exist_ok=True)
+    desc_path.write_text(json.dumps(payload, indent=2) + "\n")
 
 
 BLACKLIST = {
@@ -220,15 +229,18 @@ BLACKLIST = {
     "partners",
     "iafut-backend",
     "cross-domain",
+    "web3-backup-template",
 }
 
 
 def main():
+    refresh_summaries = "--refresh-summaries" in sys.argv
     force = "--force" in sys.argv
 
     token = get_token()
     out_path = Path(__file__).parent.parent / "data" / "repos.json"
-    cache = {} if force else load_cache(out_path)
+    desc_path = Path(__file__).parent.parent / "data" / "repo-descriptions.json"
+    summary_cache = load_summary_cache(desc_path)
 
     print("Fetching repos...", file=sys.stderr)
     repos = fetch_all_repos(token)
@@ -238,19 +250,20 @@ def main():
 
     results = []
     all_lang_bytes = {}
-    skipped = 0
+    cache_hits = 0
+    generated = 0
+    summary_cache_updated = dict(summary_cache)
     for i, repo in enumerate(repos):
         owner = repo["owner"]["login"]
         name = repo["name"]
         description = repo.get("description") or ""
 
-        cached_summary = cache.get(name, "")
-        if cached_summary:
-            summary = cached_summary
-            skipped += 1
-            print(f"  [{i+1}/{len(repos)}] {name} (cached)", file=sys.stderr)
-        else:
-            print(f"  [{i+1}/{len(repos)}] {name}", file=sys.stderr)
+        summary = summary_cache.get(name, "")
+        if summary and not force:
+            cache_hits += 1
+            print(f"  [{i+1}/{len(repos)}] {name} (summary cached)", file=sys.stderr)
+        elif refresh_summaries:
+            print(f"  [{i+1}/{len(repos)}] {name} (refreshing summary)", file=sys.stderr)
             homepage = repo.get("homepage") or ""
             readme = fetch_readme(token, owner, name)
             readme_is_thin = not readme or len(readme.strip()) < 20
@@ -263,22 +276,22 @@ def main():
                     summary = ""
                     print(f"    -> no README, using description", file=sys.stderr)
                 else:
-                    print(f"    -> skipped (no README or description)", file=sys.stderr)
-                    continue
+                    print(f"    -> skipped summary (no README or description)", file=sys.stderr)
+                    summary = ""
             else:
                 summary = summarize_with_claude(name, description, readme) or ""
+
+            summary_cache_updated[name] = summary
+            generated += 1
+        else:
+            print(f"  [{i+1}/{len(repos)}] {name}", file=sys.stderr)
 
         languages, lang_bytes = fetch_languages(token, owner, name)
         pages_url = fetch_pages_url(token, owner, name)
 
-        # Fallback for repos with no useful summary
-        if not summary and (repo.get("homepage") or ""):
-            summary = f"Website code for {repo['homepage']}."
-        elif not summary and pages_url:
-            summary = f"Website code for {pages_url}."
         # Weight adjustments and exclusions for aggregate chart
         LANG_HIDE = {"HTML", "CSS"}
-        LANG_WEIGHT = {"Jupyter Notebook": 0.1, "Rust": 2}
+        LANG_WEIGHT = {"Jupyter Notebook": 0.15, "Rust": 2}
         for lang, bytes_count in lang_bytes.items():
             if lang in LANG_HIDE:
                 continue
@@ -288,7 +301,6 @@ def main():
         results.append({
             "name": name,
             "description": description,
-            "summary": summary,
             "html_url": repo["html_url"],
             "private": repo["private"],
             "languages": languages,
@@ -332,7 +344,11 @@ def main():
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(output, indent=2))
 
-    print(f"Wrote {len(results)} repos ({skipped} cached) to {out_path}", file=sys.stderr)
+    if refresh_summaries:
+        save_summary_cache(desc_path, summary_cache_updated)
+        print(f"Wrote summaries to {desc_path} ({generated} refreshed)", file=sys.stderr)
+
+    print(f"Wrote {len(results)} repos ({cache_hits} summary cache hits) to {out_path}", file=sys.stderr)
 
 
 if __name__ == "__main__":
