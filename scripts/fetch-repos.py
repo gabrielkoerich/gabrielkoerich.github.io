@@ -339,6 +339,16 @@ def main():
             }
         )
 
+    # Add display_order for template sorting (year desc, stars desc, updated_at desc)
+    # Tera only supports single-attribute sort, so we pre-compute a rank
+    results_by_display = sorted(
+        results,
+        key=lambda r: (r["created_at"][:4], r["stargazers_count"], r["updated_at"]),
+        reverse=True,
+    )
+    for i, r in enumerate(results_by_display):
+        r["display_order"] = i
+
     # Sort alphabetically by name for stable, diff-friendly output
     results.sort(key=lambda r: r["name"].lower())
 
