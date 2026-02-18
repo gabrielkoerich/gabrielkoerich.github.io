@@ -3,42 +3,42 @@
     {
       "name": "TypeScript",
       "color": "#3178c6",
-      "percentage": 33.4
+      "percentage": 29.5
     },
     {
       "name": "Rust",
       "color": "#dea584",
-      "percentage": 17.6
-    },
-    {
-      "name": "Jupyter Notebook",
-      "color": "#DA5B0B",
-      "percentage": 14.7
-    },
-    {
-      "name": "Python",
-      "color": "#3572A5",
-      "percentage": 13.9
+      "percentage": 15.6
     },
     {
       "name": "PHP",
       "color": "#4F5D95",
-      "percentage": 11.1
+      "percentage": 13.4
     },
     {
-      "name": "Shell",
-      "color": "#89e051",
-      "percentage": 4.2
+      "name": "Jupyter Notebook",
+      "color": "#DA5B0B",
+      "percentage": 13.0
+    },
+    {
+      "name": "Python",
+      "color": "#3572A5",
+      "percentage": 12.4
     },
     {
       "name": "JavaScript",
       "color": "#f1e05a",
-      "percentage": 2.2
+      "percentage": 8.7
+    },
+    {
+      "name": "Shell",
+      "color": "#89e051",
+      "percentage": 4.6
     },
     {
       "name": "Vue",
       "color": "#41b883",
-      "percentage": 1.3
+      "percentage": 1.4
     },
     {
       "name": "Other",
@@ -58,20 +58,20 @@
           "color": "#89e051"
         },
         {
-          "name": "Python",
-          "color": "#3572A5"
-        },
-        {
           "name": "Just",
           "color": "#58a6ff"
+        },
+        {
+          "name": "Python",
+          "color": "#3572A5"
         },
         {
           "name": "Ruby",
           "color": "#701516"
         }
       ],
-      "pages_url": "http://orchestrator.gabrielkoerich.com/",
-      "stargazers_count": 3,
+      "pages_url": "http://projects.gabrielkoerich.com/orchestrator/",
+      "stargazers_count": 4,
       "topics": [
         "claude",
         "claude-code",
@@ -80,7 +80,44 @@
         "orchestrator"
       ],
       "created_at": "2026-02-06T01:00:40Z",
-      "updated_at": "2026-02-15T07:01:24Z",
+      "updated_at": "2026-02-18T12:18:47Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "skills",
+      "description": "A collection of independent, self-contained skills for AI agents. ",
+      "html_url": "https://github.com/gabrielkoerich/skills",
+      "private": false,
+      "languages": [
+        {
+          "name": "Python",
+          "color": "#3572A5"
+        },
+        {
+          "name": "Shell",
+          "color": "#89e051"
+        },
+        {
+          "name": "TypeScript",
+          "color": "#3178c6"
+        },
+        {
+          "name": "Just",
+          "color": "#58a6ff"
+        }
+      ],
+      "pages_url": "",
+      "stargazers_count": 2,
+      "topics": [
+        "claude",
+        "claude-code",
+        "codex",
+        "openclaw",
+        "skills"
+      ],
+      "created_at": "2026-02-04T17:55:33Z",
+      "updated_at": "2026-02-15T15:34:07Z",
       "archived": false,
       "fork": false
     },
@@ -132,43 +169,6 @@
       "fork": false
     },
     {
-      "name": "skills",
-      "description": "A collection of independent, self-contained skills for AI agents. ",
-      "html_url": "https://github.com/gabrielkoerich/skills",
-      "private": false,
-      "languages": [
-        {
-          "name": "Python",
-          "color": "#3572A5"
-        },
-        {
-          "name": "Shell",
-          "color": "#89e051"
-        },
-        {
-          "name": "TypeScript",
-          "color": "#3178c6"
-        },
-        {
-          "name": "Just",
-          "color": "#58a6ff"
-        }
-      ],
-      "pages_url": "",
-      "stargazers_count": 2,
-      "topics": [
-        "claude",
-        "claude-code",
-        "codex",
-        "openclaw",
-        "skills"
-      ],
-      "created_at": "2026-02-04T17:55:33Z",
-      "updated_at": "2026-02-12T17:20:10Z",
-      "archived": false,
-      "fork": false
-    },
-    {
       "name": "smart-money-concepts",
       "description": "A TypeScript implementation of Smart Money Concepts (SMC) / ICT methodology for market structure analysis. Detects order blocks, fair value gaps, breaks of structure, changes of character, liquidity grabs, and more.",
       "html_url": "https://github.com/gabrielkoerich/smart-money-concepts",
@@ -202,7 +202,69 @@
       "stargazers_count": 0,
       "topics": [],
       "created_at": "2026-02-13T23:15:27Z",
-      "updated_at": "2026-02-15T04:41:30Z",
+      "updated_at": "2026-02-18T12:20:19Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "python-agents-course",
+      "description": "Python Agents website course with Stripe & Solana payments",
+      "html_url": "https://github.com/gabrielkoerich/python-agents-course",
+      "private": true,
+      "languages": [
+        {
+          "name": "Vue",
+          "color": "#41b883"
+        },
+        {
+          "name": "PLpgSQL",
+          "color": "#58a6ff"
+        },
+        {
+          "name": "TypeScript",
+          "color": "#3178c6"
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        }
+      ],
+      "pages_url": "",
+      "stargazers_count": 0,
+      "topics": [],
+      "created_at": "2026-01-30T18:02:20Z",
+      "updated_at": "2026-02-16T12:28:27Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "portfolio-guardian-saas",
+      "description": "Portfolio Guardian SaaS - Monitor your Solana portfolio 24/7 with AI-powered insights",
+      "html_url": "https://github.com/gabrielkoerich/portfolio-guardian-saas",
+      "private": true,
+      "languages": [
+        {
+          "name": "Vue",
+          "color": "#41b883"
+        },
+        {
+          "name": "PLpgSQL",
+          "color": "#58a6ff"
+        },
+        {
+          "name": "TypeScript",
+          "color": "#3178c6"
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        }
+      ],
+      "pages_url": "",
+      "stargazers_count": 0,
+      "topics": [],
+      "created_at": "2026-01-30T17:55:23Z",
+      "updated_at": "2026-02-16T12:26:21Z",
       "archived": false,
       "fork": false
     },
@@ -238,68 +300,6 @@
       "topics": [],
       "created_at": "2026-02-07T15:51:48Z",
       "updated_at": "2026-02-13T22:31:04Z",
-      "archived": false,
-      "fork": false
-    },
-    {
-      "name": "content-course",
-      "description": "Content Course landing page with Stripe & Solana payments",
-      "html_url": "https://github.com/gabrielkoerich/content-course",
-      "private": true,
-      "languages": [
-        {
-          "name": "Vue",
-          "color": "#41b883"
-        },
-        {
-          "name": "PLpgSQL",
-          "color": "#58a6ff"
-        },
-        {
-          "name": "TypeScript",
-          "color": "#3178c6"
-        },
-        {
-          "name": "JavaScript",
-          "color": "#f1e05a"
-        }
-      ],
-      "pages_url": "",
-      "stargazers_count": 0,
-      "topics": [],
-      "created_at": "2026-01-30T18:02:20Z",
-      "updated_at": "2026-01-30T18:04:28Z",
-      "archived": false,
-      "fork": false
-    },
-    {
-      "name": "portfolio-guardian-saas",
-      "description": "Portfolio Guardian SaaS - Monitor your Solana portfolio 24/7 with AI-powered insights",
-      "html_url": "https://github.com/gabrielkoerich/portfolio-guardian-saas",
-      "private": true,
-      "languages": [
-        {
-          "name": "Vue",
-          "color": "#41b883"
-        },
-        {
-          "name": "PLpgSQL",
-          "color": "#58a6ff"
-        },
-        {
-          "name": "TypeScript",
-          "color": "#3178c6"
-        },
-        {
-          "name": "JavaScript",
-          "color": "#f1e05a"
-        }
-      ],
-      "pages_url": "",
-      "stargazers_count": 0,
-      "topics": [],
-      "created_at": "2026-01-30T17:55:23Z",
-      "updated_at": "2026-01-30T17:59:16Z",
       "archived": false,
       "fork": false
     },
@@ -532,6 +532,48 @@
       "fork": false
     },
     {
+      "name": "pass",
+      "description": "",
+      "html_url": "https://github.com/gabrielkoerich/pass",
+      "private": true,
+      "languages": [],
+      "pages_url": "",
+      "stargazers_count": 0,
+      "topics": [],
+      "created_at": "2025-09-05T23:26:14Z",
+      "updated_at": "2025-09-18T01:05:35Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "backup",
+      "description": "",
+      "html_url": "https://github.com/gabrielkoerich/backup",
+      "private": true,
+      "languages": [],
+      "pages_url": "",
+      "stargazers_count": 0,
+      "topics": [],
+      "created_at": "2025-09-17T19:56:16Z",
+      "updated_at": "2025-09-17T19:56:17Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "private-sol",
+      "description": "",
+      "html_url": "https://github.com/gabrielkoerich/private-sol",
+      "private": true,
+      "languages": [],
+      "pages_url": "",
+      "stargazers_count": 0,
+      "topics": [],
+      "created_at": "2025-08-28T11:45:31Z",
+      "updated_at": "2025-08-28T12:30:37Z",
+      "archived": false,
+      "fork": false
+    },
+    {
       "name": "lulo-cpi-example",
       "description": "Lulo Example CPI Integration",
       "html_url": "https://github.com/gabrielkoerich/lulo-cpi-example",
@@ -597,6 +639,20 @@
       "fork": false
     },
     {
+      "name": "aposente.ai",
+      "description": "",
+      "html_url": "https://github.com/gabrielkoerich/aposente.ai",
+      "private": true,
+      "languages": [],
+      "pages_url": "",
+      "stargazers_count": 0,
+      "topics": [],
+      "created_at": "2024-05-26T16:25:15Z",
+      "updated_at": "2024-05-26T16:25:15Z",
+      "archived": false,
+      "fork": false
+    },
+    {
       "name": "bean",
       "description": "Personal (or not) finance, accounting, defi/quant investments, projects and ideas.",
       "html_url": "https://github.com/gabrielkoerich/bean",
@@ -627,7 +683,21 @@
       "stargazers_count": 2,
       "topics": [],
       "created_at": "2023-04-28T12:11:39Z",
-      "updated_at": "2026-02-15T06:58:32Z",
+      "updated_at": "2026-02-17T20:14:45Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "lighthouse",
+      "description": "Lighthouse: clearing your path for audits.",
+      "html_url": "https://github.com/gabrielkoerich/lighthouse",
+      "private": true,
+      "languages": [],
+      "pages_url": "",
+      "stargazers_count": 1,
+      "topics": [],
+      "created_at": "2023-02-12T17:39:25Z",
+      "updated_at": "2026-02-15T18:41:03Z",
       "archived": false,
       "fork": false
     },
@@ -875,7 +945,7 @@
       "stargazers_count": 1,
       "topics": [],
       "created_at": "2020-09-12T04:18:16Z",
-      "updated_at": "2026-02-15T07:47:27Z",
+      "updated_at": "2026-02-18T12:48:07Z",
       "archived": false,
       "fork": false
     },
@@ -932,6 +1002,79 @@
       "fork": false
     },
     {
+      "name": "bulldesk-landing",
+      "description": "",
+      "html_url": "https://github.com/gabrielkoerich/bulldesk-landing",
+      "private": true,
+      "languages": [
+        {
+          "name": "Vue",
+          "color": "#41b883"
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        }
+      ],
+      "pages_url": "",
+      "stargazers_count": 0,
+      "topics": [],
+      "created_at": "2018-04-30T17:02:53Z",
+      "updated_at": "2023-04-17T19:22:11Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "prospector",
+      "description": "",
+      "html_url": "https://github.com/gabrielkoerich/prospector",
+      "private": true,
+      "languages": [
+        {
+          "name": "PHP",
+          "color": "#4F5D95"
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        },
+        {
+          "name": "Vue",
+          "color": "#41b883"
+        }
+      ],
+      "pages_url": "",
+      "stargazers_count": 0,
+      "topics": [],
+      "created_at": "2018-01-18T14:23:39Z",
+      "updated_at": "2018-01-18T14:23:55Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "bulldesk-lp",
+      "description": "",
+      "html_url": "https://github.com/gabrielkoerich/bulldesk-lp",
+      "private": true,
+      "languages": [
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        }
+      ],
+      "pages_url": "",
+      "stargazers_count": 0,
+      "topics": [],
+      "created_at": "2018-01-15T15:05:15Z",
+      "updated_at": "2018-01-15T16:27:05Z",
+      "archived": false,
+      "fork": false
+    },
+    {
       "name": "guidelines",
       "description": "My PHP, HTML, CSS and Javascript guidelines.",
       "html_url": "https://github.com/gabrielkoerich/guidelines",
@@ -942,6 +1085,182 @@
       "topics": [],
       "created_at": "2017-01-12T15:31:07Z",
       "updated_at": "2022-05-06T12:36:30Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "talks",
+      "description": "",
+      "html_url": "https://github.com/gabrielkoerich/talks",
+      "private": false,
+      "languages": [],
+      "pages_url": "",
+      "stargazers_count": 1,
+      "topics": [],
+      "created_at": "2017-11-11T01:57:25Z",
+      "updated_at": "2018-07-26T14:05:35Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "abramis",
+      "description": "",
+      "html_url": "https://github.com/gabrielkoerich/abramis",
+      "private": true,
+      "languages": [
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        },
+        {
+          "name": "CSS",
+          "color": "#563d7c"
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        }
+      ],
+      "pages_url": "",
+      "stargazers_count": 0,
+      "topics": [],
+      "created_at": "2017-11-06T15:12:50Z",
+      "updated_at": "2017-11-06T15:21:13Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "innbox",
+      "description": "",
+      "html_url": "https://github.com/gabrielkoerich/innbox",
+      "private": true,
+      "languages": [
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        },
+        {
+          "name": "PHP",
+          "color": "#4F5D95"
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        },
+        {
+          "name": "CSS",
+          "color": "#563d7c"
+        },
+        {
+          "name": "ApacheConf",
+          "color": "#58a6ff"
+        }
+      ],
+      "pages_url": "",
+      "stargazers_count": 0,
+      "topics": [],
+      "created_at": "2017-04-26T14:38:41Z",
+      "updated_at": "2017-07-05T14:00:59Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "vaicard",
+      "description": "",
+      "html_url": "https://github.com/gabrielkoerich/vaicard",
+      "private": true,
+      "languages": [
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        },
+        {
+          "name": "CSS",
+          "color": "#563d7c"
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        }
+      ],
+      "pages_url": "",
+      "stargazers_count": 0,
+      "topics": [],
+      "created_at": "2017-05-17T17:29:47Z",
+      "updated_at": "2017-05-17T20:10:03Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "iafut",
+      "description": "",
+      "html_url": "https://github.com/gabrielkoerich/iafut",
+      "private": true,
+      "languages": [
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        },
+        {
+          "name": "CSS",
+          "color": "#563d7c"
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        }
+      ],
+      "pages_url": "",
+      "stargazers_count": 0,
+      "topics": [],
+      "created_at": "2017-04-26T14:37:09Z",
+      "updated_at": "2017-05-05T20:21:56Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "buscape",
+      "description": "",
+      "html_url": "https://github.com/gabrielkoerich/buscape",
+      "private": true,
+      "languages": [
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        }
+      ],
+      "pages_url": "",
+      "stargazers_count": 0,
+      "topics": [],
+      "created_at": "2017-04-24T16:04:35Z",
+      "updated_at": "2017-04-24T16:04:59Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "bulldesk-teaser",
+      "description": "",
+      "html_url": "https://github.com/gabrielkoerich/bulldesk-teaser",
+      "private": true,
+      "languages": [
+        {
+          "name": "CSS",
+          "color": "#563d7c"
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a"
+        }
+      ],
+      "pages_url": "",
+      "stargazers_count": 0,
+      "topics": [],
+      "created_at": "2017-01-27T16:11:23Z",
+      "updated_at": "2017-01-27T16:17:31Z",
       "archived": false,
       "fork": false
     },
@@ -983,7 +1302,7 @@
         "zsh"
       ],
       "created_at": "2016-07-07T05:25:30Z",
-      "updated_at": "2026-02-15T09:20:07Z",
+      "updated_at": "2026-02-18T10:37:28Z",
       "archived": false,
       "fork": false
     },
@@ -1014,7 +1333,7 @@
       "stargazers_count": 1,
       "topics": [],
       "created_at": "2016-07-03T03:07:50Z",
-      "updated_at": "2026-02-15T05:33:19Z",
+      "updated_at": "2026-02-18T13:10:15Z",
       "archived": false,
       "fork": false
     },
