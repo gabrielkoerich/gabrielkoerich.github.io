@@ -33,3 +33,7 @@ just fetch-repos-summaries-force  # regenerate all from scratch
 ## Stack
 
 [Zola](https://www.getzola.org) for static site generation, plain HTML/CSS templates, Python for data fetching, and GitHub Actions for CI/CD. No JavaScript frameworks. Summaries powered by [Claude](https://claude.ai) via the `claude` CLI.
+
+---
+
+This is the projects section of [gabrielkoerich.com](https://gabrielkoerich.com).
