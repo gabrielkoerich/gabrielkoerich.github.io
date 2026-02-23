@@ -219,38 +219,43 @@ def save_summary_cache(desc_path, summaries):
     """Persist LLM summaries to disk."""
     payload = {
         "summaries": {
-            name: summaries[name] for name in sorted(summaries) if name not in BLACKLIST
+            name: summaries[name] for name in sorted(summaries) if not any(name.startswith(p) for p in EXCLUDE_PREFIXES)
         },
     }
     desc_path.parent.mkdir(parents=True, exist_ok=True)
     desc_path.write_text(json.dumps(payload, indent=2) + "\n")
 
 
-BLACKLIST = {
-    "abramis",
-    "acupunturafloripa",
-    "algorit-wp-theme",
-    "bulldesk-cf7-integration",
-    "bulldesk-site",
-    "cross-domain",
-    "formabella",
-    "fundamentando",
-    "iafut-backend",
-    "iter",
-    "iter-landing-page",
-    "koerich-consultoria",
-    "medical",
-    "momentodohler",
+# Excluded repo prefixes (first 4 chars of each)
+EXCLUDE_PREFIXES = [
+    "abra",
+    "acup",
+    "algo",
+    "bull",
+    "cros",
+    "form",
+    "fund",
+    "iafu",
+    "koer",
+    "medi",
+    "mome",
     "nasc",
-    "oblivion",
-    "partners",
-    "projects",
-    "report",
-    "testing",
-    "three",
-    "tracelog",
-    "web3-backup-template",
-}
+    "obli",
+    "part",
+    "proj",
+    "repo",
+    "test",
+    "thre",
+    "trac",
+    "web3",
+    "cet",
+    "iter",
+    "priv",
+    "pass",
+    "back",
+    "innb",
+    "vaic",
+]
 
 
 def main():
@@ -265,7 +270,11 @@ def main():
     print("Fetching repos...", file=sys.stderr)
     repos = fetch_all_repos(token)
     # Filter out forks and blacklisted repos
-    repos = [r for r in repos if not r.get("fork") and r["name"] not in BLACKLIST]
+    repos = [
+        r for r in repos
+        if not r.get("fork")
+        and not any(r["name"].startswith(p) for p in EXCLUDE_PREFIXES)
+    ]
     print(f"Found {len(repos)} repos", file=sys.stderr)
 
     results = []

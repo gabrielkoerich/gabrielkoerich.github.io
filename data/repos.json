@@ -3,47 +3,52 @@
     {
       "name": "TypeScript",
       "color": "#3178c6",
-      "percentage": 29.5
+      "percentage": 34.8
     },
     {
       "name": "Rust",
       "color": "#dea584",
-      "percentage": 15.7
-    },
-    {
-      "name": "PHP",
-      "color": "#4F5D95",
-      "percentage": 13.5
+      "percentage": 17.2
     },
     {
       "name": "Jupyter Notebook",
       "color": "#DA5B0B",
-      "percentage": 13.0
+      "percentage": 15.3
     },
     {
-      "name": "Python",
-      "color": "#3572A5",
-      "percentage": 12.4
-    },
-    {
-      "name": "JavaScript",
-      "color": "#f1e05a",
-      "percentage": 8.1
+      "name": "PHP",
+      "color": "#4F5D95",
+      "percentage": 11.4
     },
     {
       "name": "Shell",
       "color": "#89e051",
-      "percentage": 4.8
+      "percentage": 11.2
+    },
+    {
+      "name": "Python",
+      "color": "#3572A5",
+      "percentage": 5.0
+    },
+    {
+      "name": "JavaScript",
+      "color": "#f1e05a",
+      "percentage": 2.1
     },
     {
       "name": "Vue",
       "color": "#41b883",
-      "percentage": 1.4
+      "percentage": 1.2
+    },
+    {
+      "name": "Just",
+      "color": "#58a6ff",
+      "percentage": 0.5
     },
     {
       "name": "Other",
       "color": "#8b949e",
-      "percentage": 1.4
+      "percentage": 1.3
     }
   ],
   "repos": [
@@ -65,75 +70,7 @@
       "updated_at": "2025-02-20T17:42:53Z",
       "archived": false,
       "fork": false,
-      "display_order": 49
-    },
-    {
-      "name": "algorit",
-      "description": "WIP",
-      "html_url": "https://github.com/gabrielkoerich/algorit",
-      "private": true,
-      "languages": [
-        {
-          "name": "HTML",
-          "color": "#e34c26"
-        },
-        {
-          "name": "JavaScript",
-          "color": "#f1e05a"
-        },
-        {
-          "name": "CSS",
-          "color": "#563d7c"
-        },
-        {
-          "name": "PHP",
-          "color": "#4F5D95"
-        },
-        {
-          "name": "ApacheConf",
-          "color": "#58a6ff"
-        }
-      ],
-      "pages_url": "",
-      "stargazers_count": 1,
-      "topics": [],
-      "created_at": "2016-07-05T03:23:17Z",
-      "updated_at": "2017-03-06T19:24:08Z",
-      "archived": false,
-      "fork": false,
-      "display_order": 51
-    },
-    {
-      "name": "algorit.com.br",
-      "description": "",
-      "html_url": "https://github.com/gabrielkoerich/algorit.com.br",
-      "private": true,
-      "languages": [
-        {
-          "name": "PHP",
-          "color": "#4F5D95"
-        },
-        {
-          "name": "CSS",
-          "color": "#563d7c"
-        },
-        {
-          "name": "JavaScript",
-          "color": "#f1e05a"
-        },
-        {
-          "name": "ApacheConf",
-          "color": "#58a6ff"
-        }
-      ],
-      "pages_url": "",
-      "stargazers_count": 0,
-      "topics": [],
-      "created_at": "2014-11-22T02:56:44Z",
-      "updated_at": "2015-05-04T03:34:43Z",
-      "archived": false,
-      "fork": false,
-      "display_order": 55
+      "display_order": 39
     },
     {
       "name": "aposente.ai",
@@ -148,7 +85,7 @@
       "updated_at": "2024-05-26T16:25:15Z",
       "archived": false,
       "fork": false,
-      "display_order": 24
+      "display_order": 21
     },
     {
       "name": "autopilot",
@@ -184,22 +121,7 @@
       "updated_at": "2026-02-15T08:04:45Z",
       "archived": false,
       "fork": false,
-      "display_order": 28
-    },
-    {
-      "name": "backup",
-      "description": "",
-      "html_url": "https://github.com/gabrielkoerich/backup",
-      "private": true,
-      "languages": [],
-      "pages_url": "",
-      "stargazers_count": 0,
-      "topics": [],
-      "created_at": "2025-09-17T19:56:16Z",
-      "updated_at": "2025-09-17T19:56:17Z",
-      "archived": false,
-      "fork": false,
-      "display_order": 20
+      "display_order": 25
     },
     {
       "name": "basedash",
@@ -235,7 +157,7 @@
       "updated_at": "2017-01-06T02:03:10Z",
       "archived": false,
       "fork": false,
-      "display_order": 53
+      "display_order": 42
     },
     {
       "name": "bean",
@@ -268,10 +190,10 @@
       "stargazers_count": 2,
       "topics": [],
       "created_at": "2023-04-28T12:11:39Z",
-      "updated_at": "2026-02-18T20:15:42Z",
+      "updated_at": "2026-02-22T20:08:05Z",
       "archived": false,
       "fork": false,
-      "display_order": 25
+      "display_order": 22
     },
     {
       "name": "bliv",
@@ -311,7 +233,7 @@
       "updated_at": "2024-07-02T01:00:11Z",
       "archived": false,
       "fork": false,
-      "display_order": 23
+      "display_order": 20
     },
     {
       "name": "bot",
@@ -351,7 +273,7 @@
       "updated_at": "2026-02-15T07:40:54Z",
       "archived": false,
       "fork": false,
-      "display_order": 14
+      "display_order": 15
     },
     {
       "name": "bovespa.io",
@@ -383,115 +305,7 @@
       "updated_at": "2023-04-17T19:22:17Z",
       "archived": false,
       "fork": false,
-      "display_order": 54
-    },
-    {
-      "name": "bulldesk-gridsome",
-      "description": "",
-      "html_url": "https://github.com/gabrielkoerich/bulldesk-gridsome",
-      "private": true,
-      "languages": [
-        {
-          "name": "Vue",
-          "color": "#41b883"
-        },
-        {
-          "name": "HTML",
-          "color": "#e34c26"
-        },
-        {
-          "name": "JavaScript",
-          "color": "#f1e05a"
-        },
-        {
-          "name": "CSS",
-          "color": "#563d7c"
-        }
-      ],
-      "pages_url": "",
-      "stargazers_count": 0,
-      "topics": [],
-      "created_at": "2019-06-03T19:57:10Z",
-      "updated_at": "2019-06-03T20:00:06Z",
-      "archived": false,
-      "fork": false,
-      "display_order": 35
-    },
-    {
-      "name": "bulldesk-landing",
-      "description": "",
-      "html_url": "https://github.com/gabrielkoerich/bulldesk-landing",
-      "private": true,
-      "languages": [
-        {
-          "name": "Vue",
-          "color": "#41b883"
-        },
-        {
-          "name": "JavaScript",
-          "color": "#f1e05a"
-        },
-        {
-          "name": "HTML",
-          "color": "#e34c26"
-        }
-      ],
-      "pages_url": "",
-      "stargazers_count": 0,
-      "topics": [],
-      "created_at": "2018-04-30T17:02:53Z",
-      "updated_at": "2023-04-17T19:22:11Z",
-      "archived": false,
-      "fork": false,
-      "display_order": 37
-    },
-    {
-      "name": "bulldesk-lp",
-      "description": "",
-      "html_url": "https://github.com/gabrielkoerich/bulldesk-lp",
-      "private": true,
-      "languages": [
-        {
-          "name": "HTML",
-          "color": "#e34c26"
-        }
-      ],
-      "pages_url": "",
-      "stargazers_count": 0,
-      "topics": [],
-      "created_at": "2018-01-15T15:05:15Z",
-      "updated_at": "2018-01-15T16:27:05Z",
-      "archived": false,
-      "fork": false,
-      "display_order": 39
-    },
-    {
-      "name": "bulldesk-teaser",
-      "description": "",
-      "html_url": "https://github.com/gabrielkoerich/bulldesk-teaser",
-      "private": true,
-      "languages": [
-        {
-          "name": "CSS",
-          "color": "#563d7c"
-        },
-        {
-          "name": "HTML",
-          "color": "#e34c26"
-        },
-        {
-          "name": "JavaScript",
-          "color": "#f1e05a"
-        }
-      ],
-      "pages_url": "",
-      "stargazers_count": 0,
-      "topics": [],
-      "created_at": "2017-01-27T16:11:23Z",
-      "updated_at": "2017-01-27T16:17:31Z",
-      "archived": false,
-      "fork": false,
-      "display_order": 46
+      "display_order": 43
     },
     {
       "name": "buscape",
@@ -511,7 +325,7 @@
       "updated_at": "2017-04-24T16:04:59Z",
       "archived": false,
       "fork": false,
-      "display_order": 45
+      "display_order": 36
     },
     {
       "name": "cashier-iugu",
@@ -531,7 +345,7 @@
       "updated_at": "2026-02-15T00:47:03Z",
       "archived": false,
       "fork": false,
-      "display_order": 52
+      "display_order": 41
     },
     {
       "name": "classification",
@@ -559,7 +373,7 @@
       "updated_at": "2021-03-07T21:13:17Z",
       "archived": false,
       "fork": false,
-      "display_order": 33
+      "display_order": 30
     },
     {
       "name": "claudio",
@@ -639,7 +453,7 @@
       "updated_at": "2026-02-15T08:03:16Z",
       "archived": false,
       "fork": false,
-      "display_order": 29
+      "display_order": 26
     },
     {
       "name": "defi-automator",
@@ -671,7 +485,7 @@
       "updated_at": "2023-04-17T19:42:17Z",
       "archived": false,
       "fork": false,
-      "display_order": 30
+      "display_order": 27
     },
     {
       "name": "dotfiles",
@@ -711,10 +525,10 @@
         "zsh"
       ],
       "created_at": "2016-07-07T05:25:30Z",
-      "updated_at": "2026-02-18T16:30:28Z",
+      "updated_at": "2026-02-21T12:17:14Z",
       "archived": false,
       "fork": false,
-      "display_order": 47
+      "display_order": 37
     },
     {
       "name": "gabrielkoerich",
@@ -750,7 +564,7 @@
       "updated_at": "2026-02-18T12:48:07Z",
       "archived": false,
       "fork": false,
-      "display_order": 34
+      "display_order": 31
     },
     {
       "name": "gabrielkoerich.github.io",
@@ -779,10 +593,10 @@
       "stargazers_count": 1,
       "topics": [],
       "created_at": "2016-07-03T03:07:50Z",
-      "updated_at": "2026-02-18T20:24:32Z",
+      "updated_at": "2026-02-23T11:37:25Z",
       "archived": false,
       "fork": false,
-      "display_order": 48
+      "display_order": 38
     },
     {
       "name": "granatum-php",
@@ -804,7 +618,7 @@
       "updated_at": "2025-02-20T17:43:08Z",
       "archived": false,
       "fork": false,
-      "display_order": 36
+      "display_order": 32
     },
     {
       "name": "guidelines",
@@ -819,7 +633,7 @@
       "updated_at": "2022-05-06T12:36:30Z",
       "archived": false,
       "fork": false,
-      "display_order": 40
+      "display_order": 34
     },
     {
       "name": "home",
@@ -866,80 +680,20 @@
         {
           "name": "Ruby",
           "color": "#701516"
+        },
+        {
+          "name": "Shell",
+          "color": "#89e051"
         }
       ],
       "pages_url": "",
       "stargazers_count": 0,
       "topics": [],
       "created_at": "2026-02-13T23:15:27Z",
-      "updated_at": "2026-02-18T21:40:12Z",
+      "updated_at": "2026-02-23T01:36:16Z",
       "archived": false,
       "fork": false,
-      "display_order": 4
-    },
-    {
-      "name": "iafut",
-      "description": "",
-      "html_url": "https://github.com/gabrielkoerich/iafut",
-      "private": true,
-      "languages": [
-        {
-          "name": "JavaScript",
-          "color": "#f1e05a"
-        },
-        {
-          "name": "CSS",
-          "color": "#563d7c"
-        },
-        {
-          "name": "HTML",
-          "color": "#e34c26"
-        }
-      ],
-      "pages_url": "",
-      "stargazers_count": 0,
-      "topics": [],
-      "created_at": "2017-04-26T14:37:09Z",
-      "updated_at": "2017-05-05T20:21:56Z",
-      "archived": false,
-      "fork": false,
-      "display_order": 44
-    },
-    {
-      "name": "innbox",
-      "description": "",
-      "html_url": "https://github.com/gabrielkoerich/innbox",
-      "private": true,
-      "languages": [
-        {
-          "name": "JavaScript",
-          "color": "#f1e05a"
-        },
-        {
-          "name": "PHP",
-          "color": "#4F5D95"
-        },
-        {
-          "name": "HTML",
-          "color": "#e34c26"
-        },
-        {
-          "name": "CSS",
-          "color": "#563d7c"
-        },
-        {
-          "name": "ApacheConf",
-          "color": "#58a6ff"
-        }
-      ],
-      "pages_url": "",
-      "stargazers_count": 0,
-      "topics": [],
-      "created_at": "2017-04-26T14:38:41Z",
-      "updated_at": "2017-07-05T14:00:59Z",
-      "archived": false,
-      "fork": false,
-      "display_order": 42
+      "display_order": 5
     },
     {
       "name": "lighthouse",
@@ -954,7 +708,7 @@
       "updated_at": "2026-02-15T18:41:03Z",
       "archived": false,
       "fork": false,
-      "display_order": 26
+      "display_order": 23
     },
     {
       "name": "lulo-cpi-example",
@@ -981,7 +735,7 @@
       "updated_at": "2024-11-14T22:30:04Z",
       "archived": false,
       "fork": false,
-      "display_order": 22
+      "display_order": 19
     },
     {
       "name": "meshbot",
@@ -1017,7 +771,7 @@
       "updated_at": "2026-02-13T22:31:04Z",
       "archived": false,
       "fork": false,
-      "display_order": 9
+      "display_order": 11
     },
     {
       "name": "mev",
@@ -1057,7 +811,7 @@
       "updated_at": "2023-07-05T17:25:14Z",
       "archived": false,
       "fork": false,
-      "display_order": 27
+      "display_order": 24
     },
     {
       "name": "mind",
@@ -1072,7 +826,43 @@
       "updated_at": "2026-01-11T02:09:50Z",
       "archived": false,
       "fork": false,
-      "display_order": 11
+      "display_order": 13
+    },
+    {
+      "name": "orch",
+      "description": "",
+      "html_url": "https://github.com/gabrielkoerich/orch",
+      "private": true,
+      "languages": [
+        {
+          "name": "Shell",
+          "color": "#89e051"
+        },
+        {
+          "name": "Rust",
+          "color": "#dea584"
+        },
+        {
+          "name": "Python",
+          "color": "#3572A5"
+        },
+        {
+          "name": "Just",
+          "color": "#58a6ff"
+        },
+        {
+          "name": "Ruby",
+          "color": "#701516"
+        }
+      ],
+      "pages_url": "",
+      "stargazers_count": 0,
+      "topics": [],
+      "created_at": "2026-02-22T22:40:01Z",
+      "updated_at": "2026-02-23T02:16:09Z",
+      "archived": false,
+      "fork": false,
+      "display_order": 4
     },
     {
       "name": "orchestrator",
@@ -1085,19 +875,19 @@
           "color": "#89e051"
         },
         {
-          "name": "Just",
-          "color": "#58a6ff"
-        },
-        {
           "name": "Python",
           "color": "#3572A5"
+        },
+        {
+          "name": "Just",
+          "color": "#58a6ff"
         },
         {
           "name": "Ruby",
           "color": "#701516"
         }
       ],
-      "pages_url": "http://projects.gabrielkoerich.com/orchestrator/",
+      "pages_url": "http://orchestrator.gabrielkoerich.com/",
       "stargazers_count": 4,
       "topics": [
         "claude",
@@ -1107,61 +897,10 @@
         "orchestrator"
       ],
       "created_at": "2026-02-06T01:00:40Z",
-      "updated_at": "2026-02-18T20:46:36Z",
+      "updated_at": "2026-02-23T01:32:26Z",
       "archived": false,
       "fork": false,
       "display_order": 0
-    },
-    {
-      "name": "pass",
-      "description": "",
-      "html_url": "https://github.com/gabrielkoerich/pass",
-      "private": true,
-      "languages": [],
-      "pages_url": "",
-      "stargazers_count": 0,
-      "topics": [],
-      "created_at": "2025-09-05T23:26:14Z",
-      "updated_at": "2025-09-18T01:05:35Z",
-      "archived": false,
-      "fork": false,
-      "display_order": 19
-    },
-    {
-      "name": "passive-trading",
-      "description": "",
-      "html_url": "https://github.com/gabrielkoerich/passive-trading",
-      "private": true,
-      "languages": [
-        {
-          "name": "Python",
-          "color": "#3572A5"
-        },
-        {
-          "name": "Rust",
-          "color": "#dea584"
-        },
-        {
-          "name": "Jupyter Notebook",
-          "color": "#DA5B0B"
-        },
-        {
-          "name": "Just",
-          "color": "#58a6ff"
-        },
-        {
-          "name": "Dockerfile",
-          "color": "#384d54"
-        }
-      ],
-      "pages_url": "",
-      "stargazers_count": 1,
-      "topics": [],
-      "created_at": "2025-10-19T22:27:10Z",
-      "updated_at": "2026-02-15T08:11:25Z",
-      "archived": false,
-      "fork": false,
-      "display_order": 12
     },
     {
       "name": "portfolio",
@@ -1176,7 +915,7 @@
       "updated_at": "2026-02-15T08:11:24Z",
       "archived": false,
       "fork": false,
-      "display_order": 13
+      "display_order": 14
     },
     {
       "name": "portfolio-guardian-saas",
@@ -1208,50 +947,7 @@
       "updated_at": "2026-02-16T12:26:21Z",
       "archived": false,
       "fork": false,
-      "display_order": 8
-    },
-    {
-      "name": "private",
-      "description": "",
-      "html_url": "https://github.com/gabrielkoerich/private",
-      "private": true,
-      "languages": [
-        {
-          "name": "Shell",
-          "color": "#89e051"
-        },
-        {
-          "name": "AppleScript",
-          "color": "#58a6ff"
-        },
-        {
-          "name": "Just",
-          "color": "#58a6ff"
-        }
-      ],
-      "pages_url": "",
-      "stargazers_count": 0,
-      "topics": [],
-      "created_at": "2025-09-06T19:38:14Z",
-      "updated_at": "2026-02-09T13:28:26Z",
-      "archived": false,
-      "fork": false,
-      "display_order": 17
-    },
-    {
-      "name": "private-sol",
-      "description": "",
-      "html_url": "https://github.com/gabrielkoerich/private-sol",
-      "private": true,
-      "languages": [],
-      "pages_url": "",
-      "stargazers_count": 0,
-      "topics": [],
-      "created_at": "2025-08-28T11:45:31Z",
-      "updated_at": "2025-08-28T12:30:37Z",
-      "archived": false,
-      "fork": false,
-      "display_order": 21
+      "display_order": 10
     },
     {
       "name": "prospector",
@@ -1279,7 +975,7 @@
       "updated_at": "2018-01-18T14:23:55Z",
       "archived": false,
       "fork": false,
-      "display_order": 38
+      "display_order": 33
     },
     {
       "name": "python-agents-course",
@@ -1311,7 +1007,7 @@
       "updated_at": "2026-02-16T12:28:27Z",
       "archived": false,
       "fork": false,
-      "display_order": 7
+      "display_order": 9
     },
     {
       "name": "quant",
@@ -1326,7 +1022,7 @@
       "updated_at": "2026-01-11T02:18:55Z",
       "archived": false,
       "fork": false,
-      "display_order": 10
+      "display_order": 12
     },
     {
       "name": "service-manager",
@@ -1346,7 +1042,7 @@
       "updated_at": "2023-04-17T19:21:57Z",
       "archived": false,
       "fork": false,
-      "display_order": 50
+      "display_order": 40
     },
     {
       "name": "skills",
@@ -1371,7 +1067,7 @@
           "color": "#58a6ff"
         }
       ],
-      "pages_url": "",
+      "pages_url": "http://projects.gabrielkoerich.com/skills/",
       "stargazers_count": 2,
       "topics": [
         "claude",
@@ -1381,7 +1077,7 @@
         "skills"
       ],
       "created_at": "2026-02-04T17:55:33Z",
-      "updated_at": "2026-02-15T15:34:07Z",
+      "updated_at": "2026-02-20T19:16:24Z",
       "archived": false,
       "fork": false,
       "display_order": 1
@@ -1424,7 +1120,7 @@
       "updated_at": "2026-02-18T18:12:49Z",
       "archived": false,
       "fork": false,
-      "display_order": 6
+      "display_order": 8
     },
     {
       "name": "solana-nft",
@@ -1452,7 +1148,7 @@
       "updated_at": "2026-02-15T09:25:51Z",
       "archived": false,
       "fork": false,
-      "display_order": 32
+      "display_order": 29
     },
     {
       "name": "solana-nft-marketplace",
@@ -1476,7 +1172,7 @@
       "updated_at": "2022-10-26T18:25:03Z",
       "archived": false,
       "fork": false,
-      "display_order": 31
+      "display_order": 28
     },
     {
       "name": "solana-vault-example",
@@ -1504,7 +1200,7 @@
       "updated_at": "2026-02-15T05:24:20Z",
       "archived": false,
       "fork": false,
-      "display_order": 15
+      "display_order": 16
     },
     {
       "name": "talks",
@@ -1519,7 +1215,7 @@
       "updated_at": "2018-07-26T14:05:35Z",
       "archived": false,
       "fork": false,
-      "display_order": 41
+      "display_order": 35
     },
     {
       "name": "trader-smith",
@@ -1543,41 +1239,13 @@
       "updated_at": "2026-02-15T02:19:48Z",
       "archived": false,
       "fork": false,
-      "display_order": 16
-    },
-    {
-      "name": "vaicard",
-      "description": "",
-      "html_url": "https://github.com/gabrielkoerich/vaicard",
-      "private": true,
-      "languages": [
-        {
-          "name": "JavaScript",
-          "color": "#f1e05a"
-        },
-        {
-          "name": "CSS",
-          "color": "#563d7c"
-        },
-        {
-          "name": "HTML",
-          "color": "#e34c26"
-        }
-      ],
-      "pages_url": "",
-      "stargazers_count": 0,
-      "topics": [],
-      "created_at": "2017-05-17T17:29:47Z",
-      "updated_at": "2017-05-17T20:10:03Z",
-      "archived": false,
-      "fork": false,
-      "display_order": 43
+      "display_order": 17
     },
     {
       "name": "vault",
       "description": "Lock down sensitive files whenever you want \u2014 encrypt with age, remove from disk, restore with one command.",
       "html_url": "https://github.com/gabrielkoerich/vault",
-      "private": true,
+      "private": false,
       "languages": [
         {
           "name": "Shell",
@@ -1598,10 +1266,42 @@
         "security"
       ],
       "created_at": "2026-02-18T16:03:25Z",
-      "updated_at": "2026-02-18T20:42:10Z",
+      "updated_at": "2026-02-21T12:36:06Z",
       "archived": false,
       "fork": false,
-      "display_order": 5
+      "display_order": 6
+    },
+    {
+      "name": "zola-builder",
+      "description": "Generate documentation sites from a repository's README. Reads the markdown, splits it into pages, and produces a Zola site with a dark theme.",
+      "html_url": "https://github.com/gabrielkoerich/zola-builder",
+      "private": false,
+      "languages": [
+        {
+          "name": "Python",
+          "color": "#3572A5"
+        },
+        {
+          "name": "SCSS",
+          "color": "#c6538c"
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26"
+        },
+        {
+          "name": "Just",
+          "color": "#58a6ff"
+        }
+      ],
+      "pages_url": "",
+      "stargazers_count": 0,
+      "topics": [],
+      "created_at": "2026-02-19T10:38:05Z",
+      "updated_at": "2026-02-20T14:04:16Z",
+      "archived": false,
+      "fork": false,
+      "display_order": 7
     }
   ]
 }

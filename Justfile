@@ -10,10 +10,6 @@ fetch-repos *args:
 fetch-repos-summaries *args:
     python3 scripts/fetch-repos.py --refresh-summaries {{ args }}
 
-# Fetch metadata and fully regenerate all LLM summaries
-fetch-repos-summaries-force:
-    python3 scripts/fetch-repos.py --refresh-summaries --force
-
 # Build site (fetch + zola)
 build: fetch-repos
     zola build

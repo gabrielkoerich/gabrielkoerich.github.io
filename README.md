@@ -26,8 +26,8 @@ just fetch-repos    # refresh repo metadata only
 To regenerate LLM summaries:
 
 ```sh
-just fetch-repos-summaries        # refresh missing/stale summaries
-just fetch-repos-summaries-force  # regenerate all from scratch
+just fetch-repos-summaries          # refresh missing/stale summaries
+just fetch-repos-summaries --force  # regenerate all from scratch
 ```
 
 ## Stack
