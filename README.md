@@ -1,4 +1,4 @@
-# [gabrielkoerich.github.io](https://gabrielkoerich.com/projects)
+# [gabrielkoerich.github.io](https://projects.gabrielkoerich.com)
 
 A self-updating portfolio that pulls my GitHub repos, generates project summaries with Claude, and publishes a clean static site — rebuilt daily.
 
