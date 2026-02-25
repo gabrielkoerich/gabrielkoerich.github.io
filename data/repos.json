@@ -3,27 +3,27 @@
     {
       "name": "TypeScript",
       "color": "#3178c6",
-      "percentage": 34.8
+      "percentage": 35.3
     },
     {
       "name": "Rust",
       "color": "#dea584",
-      "percentage": 17.2
+      "percentage": 19.8
     },
     {
       "name": "Jupyter Notebook",
       "color": "#DA5B0B",
-      "percentage": 15.3
+      "percentage": 15.6
     },
     {
       "name": "PHP",
       "color": "#4F5D95",
-      "percentage": 11.4
+      "percentage": 11.6
     },
     {
       "name": "Shell",
       "color": "#89e051",
-      "percentage": 11.2
+      "percentage": 7.7
     },
     {
       "name": "Python",
@@ -38,7 +38,7 @@
     {
       "name": "Vue",
       "color": "#41b883",
-      "percentage": 1.2
+      "percentage": 1.3
     },
     {
       "name": "Just",
@@ -190,7 +190,7 @@
       "stargazers_count": 2,
       "topics": [],
       "created_at": "2023-04-28T12:11:39Z",
-      "updated_at": "2026-02-22T20:08:05Z",
+      "updated_at": "2026-02-25T20:14:28Z",
       "archived": false,
       "fork": false,
       "display_order": 22
@@ -525,7 +525,7 @@
         "zsh"
       ],
       "created_at": "2016-07-07T05:25:30Z",
-      "updated_at": "2026-02-21T12:17:14Z",
+      "updated_at": "2026-02-24T22:36:34Z",
       "archived": false,
       "fork": false,
       "display_order": 37
@@ -593,7 +593,7 @@
       "stargazers_count": 1,
       "topics": [],
       "created_at": "2016-07-03T03:07:50Z",
-      "updated_at": "2026-02-23T11:37:25Z",
+      "updated_at": "2026-02-23T12:53:24Z",
       "archived": false,
       "fork": false,
       "display_order": 38
@@ -690,10 +690,10 @@
       "stargazers_count": 0,
       "topics": [],
       "created_at": "2026-02-13T23:15:27Z",
-      "updated_at": "2026-02-23T01:36:16Z",
+      "updated_at": "2026-02-25T22:14:52Z",
       "archived": false,
       "fork": false,
-      "display_order": 5
+      "display_order": 6
     },
     {
       "name": "lighthouse",
@@ -830,21 +830,13 @@
     },
     {
       "name": "orch",
-      "description": "",
+      "description": "Agents Orchestrator in Rust",
       "html_url": "https://github.com/gabrielkoerich/orch",
-      "private": true,
+      "private": false,
       "languages": [
-        {
-          "name": "Shell",
-          "color": "#89e051"
-        },
         {
           "name": "Rust",
           "color": "#dea584"
-        },
-        {
-          "name": "Python",
-          "color": "#3572A5"
         },
         {
           "name": "Just",
@@ -857,12 +849,19 @@
       ],
       "pages_url": "",
       "stargazers_count": 0,
-      "topics": [],
+      "topics": [
+        "claude",
+        "claude-code",
+        "codex",
+        "opencode",
+        "orchestrator",
+        "rust"
+      ],
       "created_at": "2026-02-22T22:40:01Z",
-      "updated_at": "2026-02-23T02:16:09Z",
+      "updated_at": "2026-02-25T22:58:08Z",
       "archived": false,
       "fork": false,
-      "display_order": 4
+      "display_order": 5
     },
     {
       "name": "orchestrator",
@@ -897,7 +896,7 @@
         "orchestrator"
       ],
       "created_at": "2026-02-06T01:00:40Z",
-      "updated_at": "2026-02-23T01:32:26Z",
+      "updated_at": "2026-02-25T22:10:55Z",
       "archived": false,
       "fork": false,
       "display_order": 0
@@ -1100,7 +1099,7 @@
       "updated_at": "2026-02-15T07:34:00Z",
       "archived": false,
       "fork": false,
-      "display_order": 3
+      "display_order": 4
     },
     {
       "name": "solana-fib-cpi",
@@ -1257,7 +1256,7 @@
         }
       ],
       "pages_url": "",
-      "stargazers_count": 0,
+      "stargazers_count": 1,
       "topics": [
         "crypto",
         "cryptography",
@@ -1266,10 +1265,10 @@
         "security"
       ],
       "created_at": "2026-02-18T16:03:25Z",
-      "updated_at": "2026-02-21T12:36:06Z",
+      "updated_at": "2026-02-24T22:36:51Z",
       "archived": false,
       "fork": false,
-      "display_order": 6
+      "display_order": 3
     },
     {
       "name": "zola-builder",
