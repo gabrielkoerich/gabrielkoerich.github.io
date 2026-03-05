@@ -255,6 +255,8 @@ EXCLUDE_PREFIXES = [
     "back",
     "innb",
     "vaic",
+    "pros",
+    "clas",
 ]
 
 

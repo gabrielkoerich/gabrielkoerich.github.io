@@ -3,27 +3,27 @@
     {
       "name": "TypeScript",
       "color": "#3178c6",
-      "percentage": 31.1
+      "percentage": 31.6
     },
     {
       "name": "Rust",
       "color": "#dea584",
-      "percentage": 29.3
+      "percentage": 29.4
     },
     {
       "name": "Jupyter Notebook",
       "color": "#DA5B0B",
-      "percentage": 13.7
+      "percentage": 13.9
     },
     {
       "name": "PHP",
       "color": "#4F5D95",
-      "percentage": 10.2
+      "percentage": 9.3
     },
     {
       "name": "Shell",
       "color": "#89e051",
-      "percentage": 6.8
+      "percentage": 6.9
     },
     {
       "name": "Python",
@@ -43,7 +43,7 @@
     {
       "name": "Other",
       "color": "#8b949e",
-      "percentage": 1.4
+      "percentage": 1.3
     }
   ],
   "repos": [
@@ -65,7 +65,7 @@
       "updated_at": "2025-02-20T17:42:53Z",
       "archived": false,
       "fork": false,
-      "display_order": 39
+      "display_order": 37
     },
     {
       "name": "aposente.ai",
@@ -152,7 +152,7 @@
       "updated_at": "2017-01-06T02:03:10Z",
       "archived": false,
       "fork": false,
-      "display_order": 42
+      "display_order": 40
     },
     {
       "name": "bean",
@@ -300,7 +300,7 @@
       "updated_at": "2023-04-17T19:22:17Z",
       "archived": false,
       "fork": false,
-      "display_order": 43
+      "display_order": 41
     },
     {
       "name": "buscape",
@@ -320,7 +320,7 @@
       "updated_at": "2017-04-24T16:04:59Z",
       "archived": false,
       "fork": false,
-      "display_order": 36
+      "display_order": 34
     },
     {
       "name": "cashier-iugu",
@@ -340,35 +340,7 @@
       "updated_at": "2026-02-15T00:47:03Z",
       "archived": false,
       "fork": false,
-      "display_order": 41
-    },
-    {
-      "name": "classification",
-      "description": "",
-      "html_url": "https://github.com/gabrielkoerich/classification",
-      "private": true,
-      "languages": [
-        {
-          "name": "PHP",
-          "color": "#4F5D95"
-        },
-        {
-          "name": "Blade",
-          "color": "#f7523f"
-        },
-        {
-          "name": "Shell",
-          "color": "#89e051"
-        }
-      ],
-      "pages_url": "",
-      "stargazers_count": 0,
-      "topics": [],
-      "created_at": "2021-03-07T21:02:27Z",
-      "updated_at": "2021-03-07T21:13:17Z",
-      "archived": false,
-      "fork": false,
-      "display_order": 30
+      "display_order": 39
     },
     {
       "name": "claudio",
@@ -520,10 +492,10 @@
         "zsh"
       ],
       "created_at": "2016-07-07T05:25:30Z",
-      "updated_at": "2026-03-04T22:15:58Z",
+      "updated_at": "2026-03-04T22:33:13Z",
       "archived": false,
       "fork": false,
-      "display_order": 37
+      "display_order": 35
     },
     {
       "name": "gabrielkoerich",
@@ -559,7 +531,7 @@
       "updated_at": "2026-02-18T12:48:07Z",
       "archived": false,
       "fork": false,
-      "display_order": 31
+      "display_order": 30
     },
     {
       "name": "gabrielkoerich.github.io",
@@ -588,10 +560,10 @@
       "stargazers_count": 1,
       "topics": [],
       "created_at": "2016-07-03T03:07:50Z",
-      "updated_at": "2026-03-04T22:21:26Z",
+      "updated_at": "2026-03-04T22:48:26Z",
       "archived": false,
       "fork": false,
-      "display_order": 38
+      "display_order": 36
     },
     {
       "name": "granatum-php",
@@ -613,7 +585,7 @@
       "updated_at": "2025-02-20T17:43:08Z",
       "archived": false,
       "fork": false,
-      "display_order": 32
+      "display_order": 31
     },
     {
       "name": "guidelines",
@@ -628,7 +600,7 @@
       "updated_at": "2022-05-06T12:36:30Z",
       "archived": false,
       "fork": false,
-      "display_order": 34
+      "display_order": 32
     },
     {
       "name": "home",
@@ -685,7 +657,7 @@
       "stargazers_count": 0,
       "topics": [],
       "created_at": "2026-02-13T23:15:27Z",
-      "updated_at": "2026-03-04T17:09:18Z",
+      "updated_at": "2026-03-05T12:48:08Z",
       "archived": false,
       "fork": false,
       "display_order": 6
@@ -845,7 +817,7 @@
         "rust"
       ],
       "created_at": "2026-02-22T22:40:01Z",
-      "updated_at": "2026-03-04T16:59:27Z",
+      "updated_at": "2026-03-05T12:43:57Z",
       "archived": false,
       "fork": false,
       "display_order": 3
@@ -936,34 +908,6 @@
       "display_order": 10
     },
     {
-      "name": "prospector",
-      "description": "",
-      "html_url": "https://github.com/gabrielkoerich/prospector",
-      "private": true,
-      "languages": [
-        {
-          "name": "PHP",
-          "color": "#4F5D95"
-        },
-        {
-          "name": "HTML",
-          "color": "#e34c26"
-        },
-        {
-          "name": "Vue",
-          "color": "#41b883"
-        }
-      ],
-      "pages_url": "",
-      "stargazers_count": 0,
-      "topics": [],
-      "created_at": "2018-01-18T14:23:39Z",
-      "updated_at": "2018-01-18T14:23:55Z",
-      "archived": false,
-      "fork": false,
-      "display_order": 33
-    },
-    {
       "name": "python-agents-course",
       "description": "Python Agents website course with Stripe & Solana payments",
       "html_url": "https://github.com/gabrielkoerich/python-agents-course",
@@ -1028,7 +972,7 @@
       "updated_at": "2023-04-17T19:21:57Z",
       "archived": false,
       "fork": false,
-      "display_order": 40
+      "display_order": 38
     },
     {
       "name": "skills",
@@ -1201,7 +1145,7 @@
       "updated_at": "2018-07-26T14:05:35Z",
       "archived": false,
       "fork": false,
-      "display_order": 35
+      "display_order": 33
     },
     {
       "name": "trader-smith",
