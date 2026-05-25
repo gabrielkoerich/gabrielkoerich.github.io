@@ -1,49 +1,49 @@
 {
   "languages": [
     {
-      "name": "TypeScript",
-      "color": "#3178c6",
-      "percentage": 31.6
-    },
-    {
       "name": "Rust",
       "color": "#dea584",
-      "percentage": 29.4
+      "percentage": 45.9
+    },
+    {
+      "name": "TypeScript",
+      "color": "#3178c6",
+      "percentage": 21.9
     },
     {
       "name": "Jupyter Notebook",
       "color": "#DA5B0B",
-      "percentage": 13.9
-    },
-    {
-      "name": "PHP",
-      "color": "#4F5D95",
-      "percentage": 9.3
-    },
-    {
-      "name": "Shell",
-      "color": "#89e051",
-      "percentage": 6.9
+      "percentage": 9.6
     },
     {
       "name": "Python",
       "color": "#3572A5",
-      "percentage": 4.4
+      "percentage": 8.7
+    },
+    {
+      "name": "PHP",
+      "color": "#4F5D95",
+      "percentage": 6.4
+    },
+    {
+      "name": "Shell",
+      "color": "#89e051",
+      "percentage": 4.5
     },
     {
       "name": "JavaScript",
       "color": "#f1e05a",
-      "percentage": 1.9
+      "percentage": 1.3
     },
     {
       "name": "Vue",
       "color": "#41b883",
-      "percentage": 1.1
+      "percentage": 0.8
     },
     {
       "name": "Other",
       "color": "#8b949e",
-      "percentage": 1.3
+      "percentage": 0.8
     }
   ],
   "repos": [
@@ -113,7 +113,7 @@
       "stargazers_count": 0,
       "topics": [],
       "created_at": "2022-06-01T15:30:08Z",
-      "updated_at": "2026-02-15T08:04:45Z",
+      "updated_at": "2026-03-19T19:23:07Z",
       "archived": false,
       "fork": false,
       "display_order": 25
@@ -169,12 +169,16 @@
           "color": "#3572A5"
         },
         {
-          "name": "Shell",
-          "color": "#89e051"
+          "name": "HTML",
+          "color": "#e34c26"
         },
         {
           "name": "Just",
           "color": "#58a6ff"
+        },
+        {
+          "name": "Shell",
+          "color": "#89e051"
         },
         {
           "name": "Dockerfile",
@@ -185,7 +189,7 @@
       "stargazers_count": 2,
       "topics": [],
       "created_at": "2023-04-28T12:11:39Z",
-      "updated_at": "2026-03-04T20:12:56Z",
+      "updated_at": "2026-05-25T17:06:02Z",
       "archived": false,
       "fork": false,
       "display_order": 22
@@ -385,10 +389,10 @@
       "stargazers_count": 2,
       "topics": [],
       "created_at": "2026-01-30T17:05:31Z",
-      "updated_at": "2026-02-15T05:24:24Z",
+      "updated_at": "2026-03-12T07:33:38Z",
       "archived": false,
       "fork": false,
-      "display_order": 2
+      "display_order": 3
     },
     {
       "name": "contracts",
@@ -469,16 +473,12 @@
           "color": "#199f4b"
         },
         {
-          "name": "Lua",
-          "color": "#000080"
+          "name": "Ruby",
+          "color": "#701516"
         },
         {
           "name": "Just",
           "color": "#58a6ff"
-        },
-        {
-          "name": "Ruby",
-          "color": "#701516"
         }
       ],
       "pages_url": "",
@@ -492,7 +492,7 @@
         "zsh"
       ],
       "created_at": "2016-07-07T05:25:30Z",
-      "updated_at": "2026-03-04T22:33:13Z",
+      "updated_at": "2026-05-22T16:45:31Z",
       "archived": false,
       "fork": false,
       "display_order": 35
@@ -528,7 +528,7 @@
       "stargazers_count": 1,
       "topics": [],
       "created_at": "2020-09-12T04:18:16Z",
-      "updated_at": "2026-02-18T12:48:07Z",
+      "updated_at": "2026-05-21T21:18:18Z",
       "archived": false,
       "fork": false,
       "display_order": 30
@@ -560,7 +560,7 @@
       "stargazers_count": 1,
       "topics": [],
       "created_at": "2016-07-03T03:07:50Z",
-      "updated_at": "2026-03-04T22:48:26Z",
+      "updated_at": "2026-05-25T17:12:18Z",
       "archived": false,
       "fork": false,
       "display_order": 36
@@ -633,10 +633,10 @@
       "stargazers_count": 0,
       "topics": [],
       "created_at": "2025-09-11T19:33:45Z",
-      "updated_at": "2025-10-15T21:06:58Z",
+      "updated_at": "2026-03-06T16:18:30Z",
       "archived": false,
       "fork": false,
-      "display_order": 18
+      "display_order": 17
     },
     {
       "name": "homebrew-tap",
@@ -657,7 +657,7 @@
       "stargazers_count": 0,
       "topics": [],
       "created_at": "2026-02-13T23:15:27Z",
-      "updated_at": "2026-03-05T12:48:08Z",
+      "updated_at": "2026-05-25T13:23:46Z",
       "archived": false,
       "fork": false,
       "display_order": 6
@@ -797,17 +797,21 @@
     },
     {
       "name": "orch",
-      "description": "Agents Orchestrator in Rust",
+      "description": "Autonomous Agents Orchestrator Experiment",
       "html_url": "https://github.com/gabrielkoerich/orch",
       "private": false,
       "languages": [
         {
           "name": "Rust",
           "color": "#dea584"
+        },
+        {
+          "name": "Shell",
+          "color": "#89e051"
         }
       ],
-      "pages_url": "",
-      "stargazers_count": 1,
+      "pages_url": "http://orch.gabrielkoerich.com/",
+      "stargazers_count": 11,
       "topics": [
         "claude",
         "claude-code",
@@ -817,15 +821,15 @@
         "rust"
       ],
       "created_at": "2026-02-22T22:40:01Z",
-      "updated_at": "2026-03-05T12:43:57Z",
+      "updated_at": "2026-05-25T13:16:23Z",
       "archived": false,
       "fork": false,
-      "display_order": 3
+      "display_order": 0
     },
     {
-      "name": "orchestrator",
+      "name": "orchestrator-sh",
       "description": "A lightweight bash autonomous coding agents orchestrator.",
-      "html_url": "https://github.com/gabrielkoerich/orchestrator",
+      "html_url": "https://github.com/gabrielkoerich/orchestrator-sh",
       "private": false,
       "languages": [
         {
@@ -846,7 +850,7 @@
         }
       ],
       "pages_url": "http://orchestrator.gabrielkoerich.com/",
-      "stargazers_count": 4,
+      "stargazers_count": 5,
       "topics": [
         "claude",
         "claude-code",
@@ -855,10 +859,10 @@
         "orchestrator"
       ],
       "created_at": "2026-02-06T01:00:40Z",
-      "updated_at": "2026-03-01T15:30:19Z",
+      "updated_at": "2026-05-21T11:41:55Z",
       "archived": false,
       "fork": false,
-      "display_order": 0
+      "display_order": 1
     },
     {
       "name": "portfolio",
@@ -985,20 +989,16 @@
           "color": "#3572A5"
         },
         {
-          "name": "Shell",
-          "color": "#89e051"
-        },
-        {
           "name": "TypeScript",
           "color": "#3178c6"
         },
         {
-          "name": "Just",
-          "color": "#58a6ff"
+          "name": "Shell",
+          "color": "#89e051"
         }
       ],
       "pages_url": "http://projects.gabrielkoerich.com/skills/",
-      "stargazers_count": 2,
+      "stargazers_count": 4,
       "topics": [
         "claude",
         "claude-code",
@@ -1007,10 +1007,10 @@
         "skills"
       ],
       "created_at": "2026-02-04T17:55:33Z",
-      "updated_at": "2026-02-20T19:16:24Z",
+      "updated_at": "2026-04-07T14:37:52Z",
       "archived": false,
       "fork": false,
-      "display_order": 1
+      "display_order": 2
     },
     {
       "name": "smart-money-concepts",
@@ -1169,7 +1169,7 @@
       "updated_at": "2026-02-15T02:19:48Z",
       "archived": false,
       "fork": false,
-      "display_order": 17
+      "display_order": 18
     },
     {
       "name": "vault",
