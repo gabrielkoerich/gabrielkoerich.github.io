@@ -11,6 +11,7 @@ minify_html = true
 
 [extra]
 author = "Gabriel Koerich"
+tagline = "Senior Engineer · AI Workflows · Solana / DeFi"
 linkedin = "https://linkedin.com/in/gabrielkoerich"
 github = "https://github.com/gabrielkoerich"
 email = "gabrielmk@gmail.com"

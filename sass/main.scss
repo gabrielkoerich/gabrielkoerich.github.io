@@ -8,6 +8,7 @@
     --accent-color: #6cb2ff;
     --border-color: #22324b;
     --font-main: 'Schibsted Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Schibsted Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
 }
 
@@ -25,7 +26,7 @@ html {
 
 body {
     font-family: var(--font-main);
-    font-size: 1rem;
+    font-size: 1.0625rem;
     line-height: 1.7;
     color: var(--text-color);
     background-color: var(--bg-color);
@@ -35,13 +36,14 @@ body {
 
 /* Container */
 #container {
-    max-width: 800px;
+    max-width: 880px;
     margin: 0 auto;
     padding: 4rem 2rem;
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
     font-weight: 700;
     line-height: 1.25;
     letter-spacing: -0.015em;
@@ -75,12 +77,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    gap: 2rem;
 }
 
 header h1 {
     font-size: 1.5rem;
     margin: 0;
+    line-height: 1.1;
 }
 
 header h1 a {
@@ -98,21 +102,47 @@ header h1 a:hover {
     margin: 0 0.2rem;
 }
 
-.header-contact {
+.header-brand {
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.15rem;
 }
 
-.header-contact a {
-    color: var(--text-color);
-    text-decoration: none;
+.header-tagline {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+.header-nav {
     display: flex;
+    gap: 1.1rem;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
-.header-contact a:hover {
-    opacity: 0.7;
-    text-decoration: none;
+.header-nav-link {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    font-size: 0.9rem;
+    color: var(--text-color) !important;
+    text-decoration: none !important;
+    transition: color 0.15s;
+}
+
+.header-nav-link:hover {
+    color: var(--accent-color) !important;
+    opacity: 1;
+}
+
+.header-nav-icon {
+    display: inline-flex;
+    align-items: center;
+    color: var(--text-secondary) !important;
 }
 
 /* Language breakdown */
@@ -319,11 +349,12 @@ header h1 a:hover {
 
 /* Footer */
 #page-footer {
-    margin-top: 4rem;
-    padding-top: 2rem;
+    margin-top: 3rem;
+    padding-top: 0;
     border-top: 1px solid var(--border-color);
     font-size: 0.9rem;
     color: var(--text-secondary);
+    text-align: right;
 }
 
 #page-footer a {
@@ -376,4 +407,17 @@ header h1 a:hover {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .header-nav {
+        justify-content: flex-start;
+        gap: 0.9rem;
+    }
 }
