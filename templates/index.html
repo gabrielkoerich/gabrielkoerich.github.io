@@ -72,3 +72,14 @@
 {% endfor %}
 {% if current_year != "" %}</ul>{% endif %}
 {% endblock %}
+
+{% block scripts %}
+<script>
+document.querySelectorAll('.repo-summary').forEach(el => {
+    if (el.scrollHeight <= el.clientHeight) {
+        const btn = el.querySelector('.show-more');
+        if (btn) btn.style.display = 'none';
+    }
+});
+</script>
+{% endblock scripts %}

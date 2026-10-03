@@ -1,5 +1,6 @@
 base_url = "https://projects.gabrielkoerich.com"
 
+theme = "zola-docs"
 compile_sass = true
 build_search_index = false
 
@@ -11,7 +12,15 @@ minify_html = true
 
 [extra]
 author = "Gabriel Koerich"
+site_name = "Projects"
+home_url = "https://gabrielkoerich.com"
+stylesheet = "main.css"
 tagline = "Senior Engineer · AI Workflows · Solana / DeFi"
 linkedin = "https://linkedin.com/in/gabrielkoerich"
 github = "https://github.com/gabrielkoerich"
 email = "gabrielmk@gmail.com"
+nav = [
+    { name = "Posts", url = "https://gabrielkoerich.com/posts/" },
+    { name = "Consulting", url = "https://gabrielkoerich.com/consulting/" },
+    { name = "CV", url = "https://gabrielkoerich.com/cv/" },
+]

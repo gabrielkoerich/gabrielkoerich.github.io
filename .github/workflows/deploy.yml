@@ -34,18 +34,10 @@ jobs:
         if: ${{ env.REPOS_TOKEN == '' }}
         run: echo "REPOS_TOKEN is not configured. Skipping repo metadata refresh."
 
-      - name: Install Zola
-        uses: taiki-e/install-action@v2
+      - name: Build with the zola-docs theme
+        uses: gabrielkoerich/zola-docs-action@v1
         with:
-          tool: zola@0.19.2
-
-      - name: Build
-        run: zola build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: public
+          zola-version: "0.19.2"
 
   deploy:
     needs: build
