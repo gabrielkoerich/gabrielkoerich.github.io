@@ -1,12 +1,13 @@
 /* CSS Variables for dark theme */
 :root {
-    --bg-color: #0d1117;
-    --bg-secondary: #161b22;
-    --text-color: #c9d1d9;
-    --text-secondary: #8b949e;
-    --accent-color: #58a6ff;
-    --border-color: #30363d;
-    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --bg-color: #0a1424;
+    --bg-secondary: #111d31;
+    --heading-color: #eef3f9;
+    --text-color: #c3cddb;
+    --text-secondary: #8d9bb1;
+    --accent-color: #6cb2ff;
+    --border-color: #22324b;
+    --font-main: 'Schibsted Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
 }
 
@@ -41,10 +42,11 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    line-height: 1.3;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
     margin: 2rem 0 1rem;
-    color: var(--text-color);
+    color: var(--heading-color);
 }
 
 h1 {
