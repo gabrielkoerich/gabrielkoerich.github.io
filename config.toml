@@ -20,7 +20,7 @@ linkedin = "https://linkedin.com/in/gabrielkoerich"
 github = "https://github.com/gabrielkoerich"
 email = "gabrielmk@gmail.com"
 nav = [
+    { name = "About", url = "https://gabrielkoerich.com/about/" },
     { name = "Posts", url = "https://gabrielkoerich.com/posts/" },
     { name = "Consulting", url = "https://gabrielkoerich.com/consulting/" },
-    { name = "CV", url = "https://gabrielkoerich.com/cv/" },
 ]
