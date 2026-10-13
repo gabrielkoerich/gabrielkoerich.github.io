@@ -219,7 +219,7 @@ def save_summary_cache(desc_path, summaries):
     """Persist LLM summaries to disk."""
     payload = {
         "summaries": {
-            name: summaries[name] for name in sorted(summaries) if not any(name.startswith(p) for p in EXCLUDE_PREFIXES)
+            name: summaries[name] for name in sorted(summaries) if not excluded(name)
         },
     }
     desc_path.parent.mkdir(parents=True, exist_ok=True)
@@ -251,13 +251,19 @@ EXCLUDE_PREFIXES = [
     "cet",
     "iter",
     "priv",
-    "pass",
     "back",
     "innb",
     "vaic",
     "pros",
     "clas",
 ]
+
+# Excluded by exact name, where a prefix would also hide a public project like passbox
+EXCLUDE_NAMES = {"pass", "passive-trading"}
+
+
+def excluded(name):
+    return name in EXCLUDE_NAMES or any(name.startswith(p) for p in EXCLUDE_PREFIXES)
 
 
 def main():
@@ -275,7 +281,7 @@ def main():
     repos = [
         r for r in repos
         if not r.get("fork")
-        and not any(r["name"].startswith(p) for p in EXCLUDE_PREFIXES)
+        and not excluded(r["name"])
     ]
     print(f"Found {len(repos)} repos", file=sys.stderr)
 
