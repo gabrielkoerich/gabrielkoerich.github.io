@@ -10,17 +10,7 @@ description = "Gabriel Koerich's projects and repositories"
 default_language = "en"
 minify_html = true
 
+# The header, tagline and social links come from the zola-docs theme defaults
 [extra]
-author = "Gabriel Koerich"
 site_name = "Projects"
-home_url = "https://gabrielkoerich.com"
 stylesheet = "main.css"
-tagline = "Senior Engineer · AI Workflows · Solana / DeFi"
-linkedin = "https://linkedin.com/in/gabrielkoerich"
-github = "https://github.com/gabrielkoerich"
-email = "gabrielmk@gmail.com"
-nav = [
-    { name = "About", url = "https://gabrielkoerich.com/about/" },
-    { name = "Posts", url = "https://gabrielkoerich.com/posts/" },
-    { name = "Consulting", url = "https://gabrielkoerich.com/consulting/" },
-]
